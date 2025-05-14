@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./perfil.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>UNFLIX - Perfil</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li>
+            <a href="">
+              <img src="./assets/iconos/house.svg" alt="Home" />
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./assets/iconos/cinema.svg" alt="Series" />
+              <span>Series</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./assets/iconos/cinema.svg" alt="Peliculas" />
+              <span>Peliculas</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./assets/iconos/user.svg" alt="Perfil" />
+              <span>Perfil</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="userContainer">
+        <img
+          src="./assets/iconos/user.svg"
+          alt="Icono del perfil del usuario"
+        />
+        <p>Nombre de usuario</p>
+      </div>
+      <form class="form">
+        <div class="formContainer">
+          <div class="form__user__info">
+            <p>E-mail <span>usuario@gmail.com</span></p>
+            <p>Contraseña <span>****************</span></p>
+            <label for="newPassword"
+              >Nueva contraseña
+              <input
+                id="newPassword"
+                type="password"
+                name="newPassword"
+                placeholder="Ingrese nueva contraseña"
+            /></label>
+            <label for="repeatPassword"
+              >Repetir contraseña
+              <input
+                id="repeatPassword"
+                type="password"
+                name="repeatPassword"
+                placeholder="Ingrese nueva contraseña"
+            /></label>
+          </div>
+          <div class="form__pago">
+            <p>Método de pago</p>
+            <label for="payment"
+              ><input id="payment" type="radio" name="payment" /> Tarjeta de
+              crédito</label
+            >
+            <div class="pago__tarjeta">
+              <input
+                id="creditCard"
+                name="creditCard"
+                type="text"
+                placeholder="Número de tarjeta"
+              />
+              <input
+                id="creditCardCode"
+                name="creditCardCode"
+                type="text"
+                placeholder="XXX"
+                class="cvv"
+              />
+            </div>
+
+            <label
+              ><input type="radio" name="pago" checked /> Cupón de pago</label
+            >
+            <div class="pago__cupon">
+              <label
+                ><input name="pagoFacil" id="" type="checkbox" checked /> Pago
+                fácil</label
+              >
+              <label><input type="checkbox" /> RapiPago</label>
+            </div>
+
+            <label
+              ><input type="radio" name="pago" /> Transferencia bancaria</label
+            >
+            <p class="pago__cbu">CBU : 2183909411100018971375</p>
+          </div>
+        </div>
+        <div class="form__buttonsContainer">
+          <button type="submit" class="form__buttonsContainerCancel">
+            Cancelar subscripción
+          </button>
+          <button type="submit" class="form__buttonsContainerSave">
+            Guardar cambios
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

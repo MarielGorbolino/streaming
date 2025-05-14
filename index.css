@@ -1,0 +1,29 @@
+:root {
+  --color-primario: #e50914;
+  --color-secundario: #121212;
+  --color-fondo: #1a1a1a;
+  --color-texto: #ffffff;
+  --color-detalle: #b3b3b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-fondo);
+}
+
+li {
+  list-style: none;
+}
