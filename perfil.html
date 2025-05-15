@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Estilos globales y específicos -->
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./perfil.css" />
 
+    <!-- Fuente Montserrat desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +19,7 @@
     <title>UNFLIX - Perfil</title>
   </head>
   <body>
+    <!-- Menú de navegación (Punto 8) -->
     <header class="header">
       <nav class="header__nav">
         <ul class="header__ul">
@@ -46,15 +51,18 @@
       </nav>
     </header>
     <main class="main">
+      <!-- Contenedor con imagen y nombre de usuario (Punto 9 y 2) -->
       <div class="userContainer">
         <img
-          src="./assets/iconos/user.svg"
+          src="./assets/profile/profile_photo.png"
           alt="Icono del perfil del usuario"
         />
         <p>Nombre de usuario</p>
       </div>
+      <!-- Formulario -->
       <form class="form">
         <div class="formContainer">
+          <!-- Contenedor con Email contraseña e inputs resetear contraseña y repetir contraseña (Punto 1, 3, 4) -->
           <div class="form__user__info">
             <p>E-mail <span>usuario@gmail.com</span></p>
             <p>Contraseña <span>****************</span></p>
@@ -75,11 +83,17 @@
                 placeholder="Ingrese nueva contraseña"
             /></label>
           </div>
+          <!-- Contenedor con Método de pago, radios, inputs y checkboxs (Punto 5) -->
           <div class="form__pago">
             <p>Método de pago</p>
             <label for="payment"
-              ><input id="payment" type="radio" name="payment" /> Tarjeta de
-              crédito</label
+              ><input
+                id="payment"
+                type="radio"
+                name="payment"
+                value="creditCard"
+              />
+              Tarjeta de crédito</label
             >
             <div class="pago__tarjeta">
               <input
@@ -98,7 +112,8 @@
             </div>
 
             <label
-              ><input type="radio" name="pago" checked /> Cupón de pago</label
+              ><input type="radio" name="payment" value="cupon_pago" checked />
+              Cupón de pago</label
             >
             <div class="pago__cupon">
               <label
@@ -109,11 +124,13 @@
             </div>
 
             <label
-              ><input type="radio" name="pago" /> Transferencia bancaria</label
+              ><input type="radio" name="payment" value="bank" /> Transferencia
+              bancaria</label
             >
             <p class="pago__cbu">CBU : 2183909411100018971375</p>
           </div>
         </div>
+        <!-- Contenedor con botonces guardar cambios y cancelar subsripción (Punto 6 y 7) -->
         <div class="form__buttonsContainer">
           <button type="submit" class="form__buttonsContainerCancel">
             Cancelar subscripción

@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  min-height: 10vh;
+  background-color: var(--color-secundario);
+}
+
+.header__nav {
+  width: inherit;
+  min-height: inherit;
+}
+
+.header__ul {
+  width: inherit;
+  display: flex;
+  min-height: inherit;
+}
+
+.header__ul li {
+  flex-basis: 100%;
+}
+
+.header__ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.header__ul li a:hover {
+  background-color: var(--color-primario);
+}

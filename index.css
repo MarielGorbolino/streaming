@@ -1,3 +1,5 @@
+/* Variables CSS para usar en cualquier hoja */
+
 :root {
   --color-primario: #e50914;
   --color-secundario: #121212;
@@ -5,6 +7,8 @@
   --color-texto: #ffffff;
   --color-detalle: #b3b3b3;
 }
+
+/* Reset propiedades y establecer estilos globales */
 
 * {
   margin: 0;
@@ -16,6 +20,7 @@
   font-style: normal;
 }
 
+/* Eliminar el subrayadoen etiquetas a */
 a {
   text-decoration: none;
 }
@@ -24,6 +29,7 @@ body {
   background-color: var(--color-fondo);
 }
 
+/* Eliminar el "*" en las listas */
 li {
   list-style: none;
 }
