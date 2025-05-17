@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./userRegistration.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>UNFLIX - Registro de usuario</title>
+  </head>
+  <body>
+    <main class="main">
+      <form class="form">
+        <header class="header"><h1>Registrarse</h1></header>
+        <div class="formContainer">
+          <div class="form__user__info">
+            <label for="name"
+            >Nombre
+            <input
+              id="name"
+              type="name"
+              name="name"
+              placeholder="Nombre de usuario"
+          /></label>
+          <label for="surName"
+            >Apellido
+            <input
+              id="surName"
+              type="surName"
+              name="surName"
+              placeholder="Ingrese apellido"
+          /></label>
+          <label for="mail"
+            >E-mail
+            <input
+              id="mail"
+              type="mail"
+              name="mail"
+              placeholder="Ingrese email"
+          /></label>
+          <label for="userName"
+            >Nombre de usuario
+            <input
+              id="userName"
+              type="text"
+              name="userName"
+              placeholder="Nombre de usuario"
+          /></label>
+            <label for="newPassword"
+              >Contraseña
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+            /></label>
+            <label for="repeatPassword"
+              >Repetir contraseña
+              <input
+                id="repeatPassword"
+                type="password"
+                name="repeatPassword"
+                placeholder="Ingrese nueva contraseña"
+            /></label>
+          </div>
+          <div class="form__pago">
+            <p>Método de pago</p>
+            
+            <label for="payment"
+              ><input id="payment" type="radio" name="pago" /> Tarjeta de
+              crédito</label
+            >
+            <div class="pago__tarjeta">
+              <input
+                id="creditCard"
+                name="creditCard"
+                type="number"
+                placeholder="Número de tarjeta"
+              />
+              <input
+                id="creditCardCode"
+                name="creditCardCode"
+                type="number"
+                placeholder="XXX"
+                class="cvv"
+              />
+            </div>
+
+            <label
+              ><input type="radio" name="pago" checked /> Cupón de pago</label
+            >
+            <div class="pago__cupon">
+                <label>
+                  <input type="radio" name="metodoPago" value="pagoFacil" checked />
+                  Pago fácil
+                </label>
+                <label>
+                  <input type="radio" name="metodoPago" value="rapipago" />
+                  RapiPago
+                </label>
+            </div>
+            <label
+              ><input type="radio" name="pago" /> Transferencia bancaria</label
+            >
+            <p class="pago__cbu">CBU : 2183909411100018971375</p>
+          </div>
+        </div>
+        <div class="form__buttonsContainer">
+          <button type="submit" class="form__buttonsContainerCancel">
+            Cancelar
+          </button>
+          <button type="submit" class="form__buttonsContainerSave">
+            Confirmar
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

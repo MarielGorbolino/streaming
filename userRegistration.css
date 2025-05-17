@@ -1,0 +1,158 @@
+.header {
+  width: 100%;
+  min-height: 10vh;
+}
+
+.main {
+  display: flex;
+  min-height: 90vh;
+  margin: 2% 2% 0 2%;
+  gap: 2%;
+}
+
+.form {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8rem;
+}
+
+.form__user__info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.form__pago {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.form__user__info p,
+.form__user__info label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__user__info label input,
+.pago__tarjeta input:nth-child(1) {
+  padding: 2%;
+  width: 60%;
+  border-style: none;
+  color: black;
+}
+
+.pago__cupon {
+  padding: 2%;
+  display: flex;
+  column-gap: 2rem; /* separa horizontalmente */
+  align-items: center;
+}
+
+.pago__cbu {
+  padding: 2%;
+}
+.pago__tarjeta input:nth-child(2) {
+  width: 20%;
+  border-style: none;
+  padding: 2%;
+}
+
+.form__user__info label input::placeholder,
+.pago__tarjeta input :nth-child(1),
+.pago__tarjeta input :nth-child(2) {
+  font-size: 0.875rem;
+}
+
+.form__buttonsContainer {
+  margin-top: 2%;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 2%;
+  width: 100%;
+}
+
+.form__buttonsContainer button {
+  width: 23%;
+  padding: 1%;
+  border: none;
+}
+
+.form__buttonsContainerCancel {
+  background-color: var(--color-primario);
+}
+
+.form__buttonsContainerSave {
+  background-color: rgb(101, 155, 20);
+}
+
+@media ((width <= 1024px) and (width >= 768px)) {
+  .main {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .formContainer {
+    align-items: start;
+    column-gap: 2rem;
+  }
+}
+
+@media (width <= 768px) {
+  .main {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .form {
+    flex: 1;
+  }
+
+  .formContainer {
+    flex-direction: column;
+    row-gap: 5rem;
+  }
+
+  .form__user__info,
+  .form__pago {
+    display: flex;
+    flex: 1;
+    width: 90%;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .form__user__info label input,
+  .pago__tarjeta input:nth-child(1) {
+    font-size: 0.875rem;
+  }
+
+  .pago__tarjeta input:nth-child(2) {
+    width: 30%;
+    font-size: 0.875rem;
+  }
+
+  .form__buttonsContainer {
+    margin-bottom: 6%;
+    margin-top: 6%;
+  }
+
+  .form__buttonsContainer button {
+    width: 45%;
+    padding: 3%;
+  }
+}
