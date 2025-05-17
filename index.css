@@ -1,0 +1,35 @@
+/* Variables CSS para usar en cualquier hoja */
+
+:root {
+  --color-primario: #e50914;
+  --color-secundario: #121212;
+  --color-fondo: #1a1a1a;
+  --color-texto: #ffffff;
+  --color-detalle: #b3b3b3;
+}
+
+/* Reset propiedades y establecer estilos globales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Eliminar el subrayadoen etiquetas a */
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-fondo);
+}
+
+/* Eliminar el "*" en las listas */
+li {
+  list-style: none;
+}

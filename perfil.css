@@ -1,0 +1,175 @@
+/* Contenedor main hecho con flexbox */
+.main {
+  display: flex;
+  min-height: 90vh; /* 90 de viewport del alto (el otro 10 restante lo ocupa el header) */
+  margin: 2% 2% 0 2%;
+  gap: 2%;
+}
+
+.userContainer {
+  display: flex;
+  flex: 1; /* Ocupa 1 parte de 5 del espacio total */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Imagen circular */
+  object-fit: cover; /* Cubrimos la imagen bien con el contenedor */
+  aspect-ratio: 1/1; /* Relación aspecto cuadrada */
+  margin-bottom: 5%;
+}
+
+.form {
+  flex: 4; /* Ocupa 4 parte de 5 del espacio total */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8rem;
+}
+
+.form__user__info,
+.form__pago {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.form__user__info p,
+.form__user__info label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 
+ntch-child documentación -> https://developer.mozilla.org/es/docs/Web/CSS/:nth-child 
+
+explicación: 
+*/
+
+.form__user__info label input,
+.pago__tarjeta input:nth-child(1) {
+  padding: 2%;
+  width: 60%;
+  border-style: none;
+}
+
+.pago__tarjeta input:nth-child(2) {
+  width: 20%;
+  border-style: none;
+  padding: 2%;
+}
+
+.form__user__info label input::placeholder,
+.pago__tarjeta input :nth-child(1),
+.pago__tarjeta input :nth-child(2) {
+  font-size: 0.875rem;
+}
+
+.form__buttonsContainer {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  column-gap: 4%;
+  width: 100%;
+}
+
+.form__buttonsContainer button {
+  width: 30%;
+  padding: 1%;
+  border: none;
+  cursor: pointer;
+}
+
+.form__buttonsContainerCancel {
+  background-color: var(--color-primario);
+}
+
+.form__buttonsContainerSave {
+  background-color: rgb(101, 155, 20);
+}
+
+/* Estilos para tablets o notebook con pantalla chica/mediana */
+
+@media ((width <= 1024px) and (width >= 768px)) {
+  .main {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .userContainer img {
+    width: 20%;
+    height: auto;
+  }
+
+  .formContainer {
+    align-items: start;
+
+    column-gap: 2rem;
+  }
+}
+
+/* Estilos para mobile */
+@media (width <= 768px) {
+  .main {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .userContainer img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .form {
+    flex: 1;
+  }
+
+  .formContainer {
+    flex-direction: column;
+    row-gap: 5rem;
+  }
+
+  .form__user__info,
+  .form__pago {
+    display: flex;
+    flex: 1;
+    width: 90%;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .form__user__info label input,
+  .pago__tarjeta input:nth-child(1) {
+    font-size: 0.875rem;
+  }
+
+  .pago__tarjeta input:nth-child(2) {
+    width: 30%;
+    font-size: 0.875rem;
+  }
+
+  .form__buttonsContainer {
+    margin-bottom: 6%;
+    margin-top: 6%;
+  }
+
+  .form__buttonsContainer button {
+    width: 45%;
+    padding: 3%;
+  }
+}
