@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+
+    <!-- Fuente Montserrat desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>U N F L I X</title>
+  </head>
+  <body>
+    <!-- Menú de navegación (Punto 1) -->
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li>
+            <a href="../pages/home.html">
+              <img src="../assets/iconos/house.svg" alt="Home" />
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../assets/iconos/cinema.svg" alt="Series" />
+              <span>Series</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="../assets/iconos/cinema.svg" alt="Peliculas" />
+              <span>Peliculas</span>
+            </a>
+          </li>
+          <li>
+            <a href="./perfil.html">
+              <img src="../assets/iconos/user.svg" alt="Perfil" />
+              <span>Perfil</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Contenido principal -->
+    <main class="main">
+      <!-- Punto 3 y 4. Campo de entrada para filtrar por nombre y un selector también para filtrar por categorías-->
+      <section class="category__section">
+        <div class="category__section__selectContainer">
+          <h1>Categorías</h1>
+          <select name="category" id="category">
+            <option value="">Seleccionar categoría</option>
+            <option value="accion">Acción</option>
+            <option value="aventura">Aventura</option>
+            <option value="comedia">Comedia</option>
+            <option value="drama">Drama</option>
+            <option value="fantasia">Fantasía</option>
+            <option value="terror">Terror</option>
+            <option value="romance">Romance</option>
+            <option value="ciencia_ficcion">Ciencia Ficción</option>
+            <option value="documental">Documental</option>
+            <option value="animacion">Animación</option>
+            <option value="misterio">Misterio</option>
+            <option value="thriller">Suspenso</option>
+          </select>
+        </div>
+        <div class="category__section__inputContainer">
+          <input
+            class="category__section__inputContainer__input"
+            type="search"
+            placeholder="Buscar por nombre"
+          />
+        </div>
+      </section>
+      <!-- Punto 2. Una Grilla que muestre todas las películas y series que se ofrecen.-->
+      <section class="series__movies">
+        <div class="grid__container">
+          <a href=""><img src="../assets/img/adolescencia_s.jpg" alt="" /></a
+          ><a href=""><img src="../assets/img/bala_perdida_3.jpg" alt="" /></a
+          ><a href=""
+            ><img src="../assets/img/cafe_con_aroma_de_mujer_s.jpg" alt="" /></a
+          ><a href=""><img src="../assets/img/contraataque.jpg" alt="" /></a
+          ><a href=""
+            ><img src="../assets/img/de_vuelta_a_la_accion.jpg" alt="" /></a
+          ><a href=""><img src="../assets/img/el_marginal_s.jpg" alt="" /></a
+          ><a href=""><img src="../assets/img/estragos.jpg" alt="" /></a
+          ><a href=""><img src="../assets/img/eternauta_s.jpg" alt="" /></a
+          ><a href=""><img src="../assets/img/gt_max_p.jpg" alt="" /></a
+          ><a href=""
+            ><img src="../assets/img/la_casa_de_papel_s.jpg" alt="" /></a
+          ><a href=""
+            ><img src="../assets/img/rosario_tijeras_s.jpg" alt="" /></a
+          ><a href=""><img src="../assets/img/sindicato_p.jpg" alt="" /></a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -31,3 +31,28 @@
 .header__ul li a:hover {
   background-color: var(--color-primario);
 }
+
+@media (width <= 768px) {
+  .header__ul li a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (width <= 375px) {
+  .header__ul {
+    flex-direction: column;
+  }
+
+  .header__ul li {
+    flex-basis: 100%;
+    padding: 2%;
+  }
+
+  .header__ul li a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 5%;
+    column-gap: 5%;
+  }
+}
