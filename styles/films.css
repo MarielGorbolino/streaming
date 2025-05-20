@@ -51,7 +51,7 @@
 
 .info {
   display: grid;
-  grid-template-columns: 120px 1fr; /* ancho fijo para la etiqueta */
+  grid-template-columns: 200px 1fr; /* ancho fijo para la etiqueta */
   align-items: start;
 }
 
