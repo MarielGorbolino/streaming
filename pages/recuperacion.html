@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>UNFLIX - Recuperar contraseña</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/recuperacion.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main main__recuperacion">
+      <form class="form form__recuperacion">
+        <h2 class="form__title">Recuperar contraseña</h2>
+        <div class="formContainer formContainer__recuperacion">
+          <label for="email">
+            E-mail
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Ingrese email"
+              required
+            />
+          </label>
+
+          <label for="usuario">
+            Nombre de usuario
+            <input
+              type="text"
+              name="usuario"
+              id="usuario"
+              placeholder="Ingrese nombre de usuario"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="form__buttonsContainer">
+          <button type="submit" class="form__buttonsContainerEnviar">
+            Enviar email
+          </button>
+          <button type="button" class="form__buttonsContainerCancelar">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
