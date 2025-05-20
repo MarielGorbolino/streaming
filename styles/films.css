@@ -1,7 +1,7 @@
   .descriptionConteiner {
     display: flex;
     flex-direction:row;
-    column-gap: 10%;
+    column-gap: 5%;
 }
 
   .descriptionConteinerImg {
@@ -13,24 +13,40 @@
     row-gap: 2rem;
 }
 
-  .descriptionConteinerImg button {
+.descriptionConteinerImg button {
     width: 100%;
     padding: 1%;
     color: #000;
     font-size: 100%;
-  }
+}
 
   .descriptionConteinerText {
     display: flex;
     justify-content:center;
     flex-direction:column;
     width: 60%;
-    row-gap: 2rem;
+    row-gap: 2rem; 
+    margin-right: 3%;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 120px 1fr; /* ancho fijo para la etiqueta */
+  align-items: start;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  text-align: left;
 }
 
 .main h1 {
   margin-left: 2%;
 }
+
 
 .grid__container {
   display: grid;
@@ -59,10 +75,10 @@
   .main h1 {
     margin-left: 1%;
   }
-    
+
   .descriptionConteiner {
-    column-gap: 2%;
-}
+    column-gap: 3%; 
+  }
 
   .descriptionConteinerImg {
     width: 100%;
@@ -70,17 +86,18 @@
 }
 
   .descriptionConteinerText {
-    width: 100%;
-    padding: 3%;
-}
+      width: 100%;
+      padding: 3%;
+      margin-top: 3%
+  }
 
-.grid__container {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas:
-    "a b"
-    "c d";
-}
+  .grid__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d";
+  }
 
 }
 
@@ -93,7 +110,7 @@
   .main h1 {
     margin-left: 3%;
   }
-  
+
   .descriptionConteiner {
     display: flex;
     flex-direction:column;
@@ -103,15 +120,13 @@
   .descriptionConteinerText {
     width: 100%;
     padding: 3%;
-}
+  }
 
-.grid__container {
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas:
-    "a" 
-    "b"
-    "c" 
-    "d";
-}
+  .grid__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d";
+  }
 }
