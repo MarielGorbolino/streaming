@@ -57,12 +57,12 @@
   }
 
 
-  .grid__container {
+  .flex__container {
     display: flex;
     flex-direction: row;
   }
 
-  .grid__container img {
+  .flex__container img {
     width: 100%;
     padding: 1%;
   }
