@@ -1,0 +1,188 @@
+.series__movies {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  margin: 3%;
+}
+
+.category__section {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.category__section__selectContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 3%;
+}
+
+.category__section__selectContainer select {
+  width: 60%;
+  height: 100%;
+}
+
+.category__section__selectContainer select,
+.category__section__selectContainer select option {
+  color: black;
+  border-style: none;
+}
+
+.category__section__inputContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.category__section__inputContainer__input {
+  padding: 0 1%;
+  width: 70%;
+  height: 100%;
+  border-style: none;
+}
+
+/* Grid general para mostrar las imágenes de series/películas */
+.grid__container {
+  display: grid;
+  width: 100%;
+
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "a b c d"
+    "e f g h"
+    "i j k l";
+}
+
+/* Estilos para los enlaces e imágenes dentro del grid */
+.grid__container a {
+  width: 100%;
+  height: 100%;
+}
+
+.grid__container a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Asignación de cada imagen a un área del grid (12 elementos) usando nth-child */
+.grid__container a:nth-child(1) {
+  grid-area: a;
+}
+
+.grid__container a:nth-child(2) {
+  grid-area: b;
+}
+
+.grid__container a:nth-child(3) {
+  grid-area: c;
+}
+
+.grid__container a:nth-child(4) {
+  grid-area: d;
+}
+
+.grid__container a:nth-child(5) {
+  grid-area: e;
+}
+
+.grid__container a:nth-child(6) {
+  grid-area: f;
+}
+
+.grid__container a:nth-child(7) {
+  grid-area: g;
+}
+
+.grid__container a:nth-child(8) {
+  grid-area: h;
+}
+
+.grid__container a:nth-child(9) {
+  grid-area: i;
+}
+
+.grid__container a:nth-child(10) {
+  grid-area: j;
+}
+
+.grid__container a:nth-child(11) {
+  grid-area: k;
+}
+
+.grid__container a:nth-child(12) {
+  grid-area: l;
+}
+
+/* Responsive para tablets: 3 columnas, 4 filas */
+@media ((width <= 1024px) and (width >= 768px)) {
+  .grid__container {
+    display: grid;
+    margin-top: 3%;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "a b c"
+      "d e f"
+      "g h i"
+      "j k l";
+  }
+}
+
+/* Responsive para mobile: 2 columnas, 6 filas */
+@media (width <= 768px) {
+  .grid__container {
+    display: grid;
+    margin-top: 3%;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f"
+      "g h"
+      "i j"
+      "k l";
+  }
+
+  /* Adaptación a columna */
+  .category__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category__section__selectContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .category__section__selectContainer select {
+    width: 100%;
+    margin: 3% 0;
+    padding: 2%;
+  }
+
+  .category__section__inputContainer {
+    flex: 1;
+    display: flex;
+  }
+
+  .category__section__inputContainer__input {
+    padding: 2%;
+    width: 100%;
+
+    border-style: none;
+  }
+}
