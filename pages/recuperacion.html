@@ -15,7 +15,12 @@
   </head>
   <body>
     <main class="main main__recuperacion">
-      <form class="form form__recuperacion">
+      <form
+        class="form form__recuperacion"
+        action="../index.html"
+        method="get"
+        autocomplete="off"
+      >
         <h2 class="form__title">Recuperar contraseña</h2>
         <div class="formContainer formContainer__recuperacion">
           <label for="email">
@@ -45,9 +50,9 @@
           <button type="submit" class="form__buttonsContainerEnviar">
             Enviar email
           </button>
-          <button type="button" class="form__buttonsContainerCancelar">
+          <a href="../index.html" class="form__buttonsContainerCancelar">
             Cancelar
-          </button>
+          </a>
         </div>
       </form>
     </main>
