@@ -1,182 +1,175 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-main{
-     flex-grow: 1;
+main {
+  flex-grow: 1;
 }
-.login{
-    display: flex;
-    justify-content: center;
-    background-color: #696969; 
-    width: 100%;
-    /* height: 57em; */
+.login {
+  display: flex;
+  justify-content: center;
+  background-color: #696969;
+  width: 100%;
+  /* height: 57em; */
 }
-.login-recuadro{
-    margin-top: 8%;
-    margin-bottom: 15%;
-    display: flex;
-    width: 25%;
-    height: 30em;
-    background-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-}
-
-.login-titulo{
-    font-size: 1.5em;
-    text-align: center;
-    padding: 3% 15%;
-    margin-top: 5%;
-    margin-bottom: 4%;
-}
-.login__form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1%;
-    width: 95%;
-}
-.login__form-email{
-    display: block;
-    width: 80%;
-    margin-top: 1em;
-    padding: 2% 3%;
-}
-.login__button{
-    width: 50%;
-    margin-top: 11%;
-    font-size: 0.75em;
-    padding: 1% 1%;
-    color: white;
-    background-color: red;
-    border-style: solid;
-    border-radius: 0.4em;
-    cursor: pointer;
-}
-.login-recuperar{
-    text-decoration: none;
-    color: white;
-    font-size: 0.75em;
-    margin-top: 5%;
-    margin-bottom: 12%;
-}
-.login-leyenda{
-    font-size: 0.68em;
-    color: rgb(223, 223, 223);
-}
-.login-registrarse{
-    width: 74%;
-    margin-top: 5%;
-    padding: 2% 1%;
-    text-align: center;
-    font-size: 0.68em;
-    text-decoration: none;
-    color: white;
-    background-color: red;
-    border-radius: 0.2em;
-    cursor: pointer;
-}
-.login__button:hover, .login-registrarse:hover{
-     color: rgb(223, 223, 223);
-    background-color: rgb(198, 0, 0);
-}
-.login-recuperar:hover{
-    color: rgb(223, 223, 223);
-}
-.login__form-email:hover{
-        font-size: 0.9em;
-        color: #696969;
+.login-recuadro {
+  margin-top: 8%;
+  margin-bottom: 15%;
+  display: flex;
+  width: 25%;
+  height: auto;
+  padding: 1%;
+  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
 }
 
+.login-titulo {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 3% 15%;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+  width: 95%;
+}
+.login__form-email {
+  display: block;
+  width: 80%;
+  margin-top: 1em;
+  padding: 2% 3%;
+}
+.login__button {
+  width: 50%;
+  margin-top: 11%;
+  font-size: 0.75em;
+  padding: 1% 1%;
+  color: white;
+  background-color: red;
+  border-style: solid;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+.login-recuperar {
+  text-decoration: none;
+  color: white;
+  font-size: 0.75em;
+  margin-top: 5%;
+  margin-bottom: 12%;
+}
+.login-leyenda {
+  font-size: 0.68em;
+  color: rgb(223, 223, 223);
+}
+.login-registrarse {
+  width: 74%;
+  margin-top: 5%;
+  padding: 2% 1%;
+  text-align: center;
+  font-size: 0.68em;
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+.login__button:hover,
+.login-registrarse:hover {
+  color: rgb(223, 223, 223);
+  background-color: rgb(198, 0, 0);
+}
+.login-recuperar:hover {
+  color: rgb(223, 223, 223);
+}
+.login__form-email:hover {
+  font-size: 0.9em;
+  color: #696969;
+}
 
 /* Para Portatil 1024 px*/
-@media screen and (min-width:64em){
-
-    .login-recuadro{
-        width: 30%;
-    }
-
-
+@media screen and (min-width: 64em) {
+  .login-recuadro {
+    width: 30%;
+  }
 }
 
 /* Para Tablet 768 px*/
-@media screen and (max-width:64em) and (min-width:47em){
-
-    .login-recuadro{
-        width: 40%;
-    }
-    .login-titulo{
+@media screen and (max-width: 64em) and (min-width: 47em) {
+  .login-recuadro {
+    width: 40%;
+  }
+  .login-titulo {
     font-size: 1.2em;
     margin-top: 4%;
-    }
+  }
 
-    .login__form-email{
+  .login__form-email {
     padding: 1% 3%;
     font-size: 0.7em;
-    }
-    .login__button {
-        margin-top: 8%;
-
-    }
-    .login-recuperar {
-        font-size: 11px;
-        margin-top: 6%;
-    }
-    .login-leyenda {
+  }
+  .login__button {
+    margin-top: 8%;
+  }
+  .login-recuperar {
+    font-size: 11px;
+    margin-top: 6%;
+  }
+  .login-leyenda {
     font-size: 10px;
-    }
-    .login-registrarse {
+  }
+  .login-registrarse {
     width: 65%;
-    }
+  }
 }
 
-
 /* Para Mobile 320 px*/
-@media screen and (max-width:47em) and (min-width:20em){
-    .login{
-    background-color: #000000; 
+@media screen and (max-width: 47em) and (min-width: 20em) {
+  .login {
+    background-color: #000000;
     width: 100%;
-    }
+  }
 
-    .login-recuadro{
-        width: 100%;
-        height: max-content;
-        margin-bottom: 30%;
+  .login-recuadro {
+    width: 100%;
+    height: max-content;
+    margin-bottom: 30%;
+  }
 
-    }
+  .login-titulo {
+    font-size: 1em;
+    margin-top: 4%;
+  }
+  .login__form {
+    width: 90%;
+    margin-top: 0%;
+  }
 
-    .login-titulo{
-        font-size: 1em;
-        margin-top: 4%;
-    }
-    .login__form{
-        width: 90%;
-        margin-top: 0%;
-    }
-
-    .login__form-email{
-        padding: 0.1em 0.2em;
-        font-size: 0.68em;
-    }
-    .login__button {
-        margin-top: 7%;
-        font-size: 0.66em;
-    }
-    .login-recuperar {
-        font-size: 0.6em;
-        margin-top: 6%;
-    }
-    .login-leyenda {
-        font-size: 10px;
-    }
-    .login-registrarse {
-        width: 60%;
-        font-size: 0.66em;
-        padding: 0.4em 0.1em;
-    }
-
+  .login__form-email {
+    padding: 0.1em 0.2em;
+    font-size: 0.68em;
+  }
+  .login__button {
+    margin-top: 7%;
+    font-size: 0.66em;
+  }
+  .login-recuperar {
+    font-size: 0.6em;
+    margin-top: 6%;
+  }
+  .login-leyenda {
+    font-size: 10px;
+  }
+  .login-registrarse {
+    width: 60%;
+    font-size: 0.66em;
+    padding: 0.4em 0.1em;
+  }
 }
