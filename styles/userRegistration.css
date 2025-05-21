@@ -95,7 +95,11 @@
 }
 
 .form__buttonsContainerCancel {
+  text-align: center;
   background-color: var(--color-primario);
+  width: 23%;
+  padding: 1%;
+  font-size: 0.875rem;
 }
 
 .form__buttonsContainerSave {

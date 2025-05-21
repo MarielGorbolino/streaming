@@ -27,7 +27,7 @@
               id="name"
               type="text"
               name="name"
-              placeholder="Nombre de usuario"
+              placeholder="Nombre de usuario" required
           /></label>
           <label for="surName"
             >Apellido
@@ -35,7 +35,7 @@
               id="surName"
               type="text"
               name="surName"
-              placeholder="Ingrese apellido"
+              placeholder="Ingrese apellido" required
           /></label>
           <label for="email"
             >E-mail
@@ -43,7 +43,7 @@
               id="email"
               type="email"
               name="email"
-              placeholder="Ingrese email"
+              placeholder="Ingrese email" required
           /></label>
           <label for="userName"
             >Nombre de usuario
@@ -51,7 +51,7 @@
               id="userName"
               type="text"
               name="userName"
-              placeholder="Nombre de usuario"
+              placeholder="Nombre de usuario" required
           /></label>
             <label for="newPassword"
               >Contraseña
@@ -59,7 +59,7 @@
                 id="password"
                 type="password"
                 name="password"
-                placeholder="Contraseña"
+                placeholder="Contraseña" required
             /></label>
             <label for="repeatPassword"
               >Repetir contraseña
@@ -67,7 +67,7 @@
                 id="repeatPassword"
                 type="password"
                 name="repeatPassword"
-                placeholder="Ingrese nueva contraseña"
+                placeholder="Ingrese nueva contraseña" required
             /></label>
           </div>
           <div class="form__pago">
@@ -113,9 +113,9 @@
           </div>
         </div>
         <div class="form__buttonsContainer">
-          <button type="submit" class="form__buttonsContainerCancel">
+          <a class="form__buttonsContainerCancel" href="../index.html">
             Cancelar
-          </button>
+          </a>
           <button type="submit" class="form__buttonsContainerSave">
             Confirmar
           </button>
