@@ -161,4 +161,10 @@
     width: 45%;
     padding: 3%;
   }
+
+  .form__buttonsContainerCancel {
+    width: 45%;
+    padding: 3%;
+  }
+  
 }
