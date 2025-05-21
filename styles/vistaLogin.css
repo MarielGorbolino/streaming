@@ -19,6 +19,8 @@
 
 .banner__img {
   width: 100%;
+  object-fit: cover;
+  background-size: cover;
 }
 .banner-texto__p,
 .banner-texto__h2 {
