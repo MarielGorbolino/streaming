@@ -14,7 +14,7 @@
 
 .main {
   min-height: 100vh;
-  background-color: #000000;
+  background-color: var(--color-fondo);
 }
 
 .banner__img {
@@ -72,6 +72,11 @@
   margin-top: 1%;
   width: 95%;
 }
+
+.login__form input {
+  color: black;
+}
+
 .login__form-email {
   display: block;
   width: 80%;
