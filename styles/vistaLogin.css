@@ -12,6 +12,11 @@
   font-family: sans-serif;
 }
 
+.main {
+  min-height: 100vh;
+  background-color: #000000;
+}
+
 .banner__img {
   width: 100%;
 }
@@ -30,19 +35,19 @@
 .login {
   display: flex;
   justify-content: center;
-  background-color: #000000;
+
   width: 100%;
-  min-height: 100vh;
+
   padding-top: 12%;
 }
 
 .login-recuadro {
   margin-top: 8%;
-  margin-bottom: 15%;
+
   display: flex;
   width: 25%;
   height: auto;
-  padding: 3%;
+
   background-color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
