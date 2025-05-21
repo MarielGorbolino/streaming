@@ -2,22 +2,46 @@
     padding: 0;
     margin: 0;
 }
-main{
-     flex-grow: 1;
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    position: absolute;
+    width: 100%;
+    font-family: sans-serif;
 }
+
+.banner__img{
+    width: 100%;
+}
+.banner-texto__p, .banner-texto__h2{
+    color: #ff0000;
+    position: absolute;
+    font-size: 3.8em;
+}
+.banner-texto__p{
+    bottom: 35%;
+    color: #000000;
+    font-size: 1.8em;
+}
+
 .login{
     display: flex;
     justify-content: center;
-    background-color: #696969; 
+    background-color: #000000; 
     width: 100%;
-    /* height: 57em; */
+    min-height: 100vh;
+    padding-top: 12%;
 }
+
 .login-recuadro{
     margin-top: 8%;
     margin-bottom: 15%;
     display: flex;
     width: 25%;
-    height: 30em;
+    height: auto;
+    padding: 3%;
     background-color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
@@ -53,9 +77,10 @@ main{
     padding: 1% 1%;
     color: white;
     background-color: red;
-    border-style: solid;
     border-radius: 0.4em;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
 .login-recuperar{
     text-decoration: none;
@@ -93,19 +118,28 @@ main{
 }
 
 
+
 /* Para Portatil 1024 px*/
 @media screen and (min-width:64em){
 
     .login-recuadro{
         width: 30%;
     }
-
-
+    .banner-texto__p{
+    bottom: 27%;
+    font-size: 1.5em;
+    }
 }
 
 /* Para Tablet 768 px*/
 @media screen and (max-width:64em) and (min-width:47em){
-
+    .banner-texto__h2{
+        font-size: 2.5em;
+    }
+     .banner-texto__p{
+        bottom: 25%;
+        font-size: 1.2em;
+    }
     .login-recuadro{
         width: 40%;
     }
@@ -137,6 +171,14 @@ main{
 
 /* Para Mobile 320 px*/
 @media screen and (max-width:47em) and (min-width:20em){
+      .banner-texto__h2{
+        font-size: 2em;
+    }
+     .banner-texto__p{
+        bottom: 10%;
+        font-size: 0.8em;
+    }
+
     .login{
     background-color: #000000; 
     width: 100%;
