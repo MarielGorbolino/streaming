@@ -15,12 +15,13 @@
     />
   </head>
   <body>
-    <main class="main">
+    <header></header>
+    <main>
       <div class="banner">
         <img
           class="banner__img"
           src="./assets/img/bannerLogin.png"
-          alt="Banner"
+          alt="Baner principal"
         />
         <h2 class="banner-texto__h2">U N F L I X</h2>
         <p class="banner-texto__p">Series y peliculas</p>
@@ -31,7 +32,12 @@
           <p class="login-leyenda">
             Ingresa el email y la contraseña de tu cuenta
           </p>
-          <form class="login__form" action="" method="get" autocomplete="off">
+          <form
+            class="login__form"
+            action="./pages/home.html"
+            method="get"
+            autocomplete="off"
+          >
             <label for="email"></label>
             <input
               class="login__form-email"
@@ -41,7 +47,6 @@
               placeholder="Email"
               required
             />
-
             <label for="contrasenia"></label>
             <input
               class="login__form-email"
@@ -51,8 +56,7 @@
               placeholder="Contraseña"
               required
             />
-            <!-- <button type="submit" class="login__button">Iniciar sesión</button> -->
-            <a class="login__button" href="./pages/home.html">Iniciar sesión</a>
+            <button type="submit" class="login__button">Iniciar sesión</button>
           </form>
           <a class="login-recuperar" href="./pages/recuperacion.html"
             >¿Olvidaste tu contraseña?</a
