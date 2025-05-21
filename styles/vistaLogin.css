@@ -37,21 +37,21 @@
 .login {
   display: flex;
   justify-content: center;
-
+  align-items: center;
   width: 100%;
 
   padding-top: 12%;
 }
 
 .login-recuadro {
-  margin-top: 8%;
-
+  margin-top: 10%;
+  margin-bottom: 1%;
   display: flex;
   width: 25%;
   height: auto;
-
+  padding: 2%;
   background-color: black;
-
+  border-radius: 2%;
   color: white;
   flex-wrap: nowrap;
   flex-direction: column;
