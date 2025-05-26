@@ -73,6 +73,7 @@
                 type="password"
                 name="newPassword"
                 placeholder="Ingrese nueva contraseña"
+                required
             /></label>
             <label for="repeatPassword"
               >Repetir contraseña
@@ -81,6 +82,7 @@
                 type="password"
                 name="repeatPassword"
                 placeholder="Ingrese nueva contraseña"
+                required
             /></label>
           </div>
           <!-- Contenedor con Método de pago, radios, inputs y checkboxs (Punto 5) -->
@@ -92,6 +94,7 @@
                 type="radio"
                 name="payment"
                 value="creditCard"
+                required
               />
               Tarjeta de crédito</label
             >
@@ -99,15 +102,17 @@
               <input
                 id="creditCard"
                 name="creditCard"
-                type="text"
+                type="number"
                 placeholder="Número de tarjeta"
+                required
               />
               <input
                 id="creditCardCode"
                 name="creditCardCode"
-                type="text"
+                type="number"
                 placeholder="XXX"
                 class="cvv"
+                required
               />
             </div>
 
@@ -117,24 +122,35 @@
             >
             <div class="pago__cupon">
               <label
-                ><input name="pagoFacil" id="" type="checkbox" checked /> Pago
-                fácil</label
+                ><input
+                  name="cupon_pago"
+                  value="pagoFAcil"
+                  type="radio"
+                  checked
+                />
+                Pago fácil</label
               >
-              <label><input type="checkbox" /> RapiPago</label>
+              <label
+                ><input type="radio" name="cupon_pago" value="rapiPago" />
+                RapiPago</label
+              >
             </div>
 
             <label
               ><input type="radio" name="payment" value="bank" /> Transferencia
               bancaria</label
             >
-            <p class="pago__cbu">CBU : 2183909411100018971375</p>
+            <p>CBU : 2183909411100018971375</p>
           </div>
         </div>
         <!-- Contenedor con botonces guardar cambios y cancelar subsripción (Punto 6 y 7) -->
         <div class="form__buttonsContainer">
-          <button type="submit" class="form__buttonsContainerCancel">
+          <a
+            href="./userRegistration.html"
+            class="form__buttonsContainerCancel"
+          >
             Cancelar subscripción
-          </button>
+          </a>
           <button type="submit" class="form__buttonsContainerSave">
             Guardar cambios
           </button>
