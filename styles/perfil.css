@@ -43,7 +43,7 @@
 .form__user__info,
 .form__pago {
   display: flex;
-  flex: 1;
+
   flex-direction: column;
   row-gap: 2rem;
 }
@@ -62,6 +62,11 @@ explicación:
 */
 
 .form__user__info label input,
+.pago__tarjeta input {
+  color: #000;
+}
+
+.form__user__info label input,
 .pago__tarjeta input:nth-child(1) {
   padding: 2%;
   width: 60%;
@@ -75,8 +80,11 @@ explicación:
 }
 
 .form__user__info label input::placeholder,
-.pago__tarjeta input :nth-child(1),
-.pago__tarjeta input :nth-child(2) {
+.pago__tarjeta input::placeholder {
+  font-size: 0.875rem;
+}
+
+.pago__tarjeta input {
   font-size: 0.875rem;
 }
 
@@ -88,10 +96,14 @@ explicación:
   width: 100%;
 }
 
-.form__buttonsContainer button {
+.form__buttonsContainer button,
+.form__buttonsContainer a {
   width: 30%;
   padding: 1%;
   border: none;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
