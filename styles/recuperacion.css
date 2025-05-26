@@ -55,7 +55,6 @@
   border: none;
   cursor: pointer;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
 }
 
 .form__buttonsContainerEnviar:hover {
@@ -69,12 +68,16 @@
   border: none;
   cursor: pointer;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
 }
 
 .form__buttonsContainerCancelar:hover {
   background-color: #70060b;
   font-weight: bold;
+}
+
+.form__buttonsContainerEnviar,
+.form__buttonsContainerCancelar {
+  font-size: 0.85rem; 
 }
 
 @media (max-width: 768px) {
@@ -101,5 +104,6 @@
   .form__buttonsContainerEnviar,
   .form__buttonsContainerCancelar {
     width: 100%;
+    text-align: center;
   }
 }

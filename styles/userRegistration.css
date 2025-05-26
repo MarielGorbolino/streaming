@@ -101,8 +101,18 @@
   font-size: 0.875rem;
 }
 
+.form__buttonsContainerCancel:hover {
+  background-color: #70060b;
+  font-weight: bold;
+}
+
 .form__buttonsContainerSave {
   background-color: rgb(101, 155, 20);
+}
+
+.form__buttonsContainerSave:hover {
+  background-color: rgb(65, 99, 13);
+  font-weight: bold;
 }
 
 @media ((width <= 1024px) and (width >= 768px)) {

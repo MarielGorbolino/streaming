@@ -111,8 +111,18 @@ explicación:
   background-color: var(--color-primario);
 }
 
+.form__buttonsContainerCancel:hover {
+  background-color: #70060b;
+  font-weight: bold;
+}
+
 .form__buttonsContainerSave {
   background-color: rgb(101, 155, 20);
+}
+
+.form__buttonsContainerSave:hover {
+  background-color: rgb(65, 99, 13);
+  font-weight: bold;
 }
 
 /* Estilos para tablets o notebook con pantalla chica/mediana */
