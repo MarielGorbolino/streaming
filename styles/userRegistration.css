@@ -49,12 +49,16 @@
   align-items: center;
 }
 
+.pago__tarjeta input,
+.form__user__info label input {
+  color: black;
+}
+
 .form__user__info label input,
 .pago__tarjeta input:nth-child(1) {
   padding: 2%;
   width: 60%;
   border-style: none;
-  color: black;
 }
 
 .pago__cupon {
@@ -67,6 +71,7 @@
 .pago__cbu {
   padding: 2%;
 }
+
 .pago__tarjeta input:nth-child(2) {
   width: 20%;
   border-style: none;
@@ -182,5 +187,4 @@
     width: 45%;
     padding: 3%;
   }
-  
 }
