@@ -32,20 +32,18 @@
 }
 
 .formContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  column-gap: 8rem;
 }
 
 .form__user__info,
 .form__pago {
   display: flex;
-
   flex-direction: column;
   row-gap: 2rem;
+  width: 100%;
 }
 
 .form__user__info p,
@@ -178,9 +176,9 @@ explicación:
   }
 
   .formContainer {
-    flex-direction: column;
-    row-gap: 5rem;
-  }
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
 
   .form__user__info,
   .form__pago {
@@ -207,6 +205,11 @@ explicación:
   }
 
   .form__buttonsContainer button {
+    width: 45%;
+    padding: 3%;
+  }
+
+  .form__buttonsContainer a {
     width: 45%;
     padding: 3%;
   }
