@@ -92,12 +92,16 @@ explicación:
   margin-top: 2%;
   display: flex;
   justify-content: center;
+  text-align: center;
   column-gap: 4%;
   width: 100%;
 }
 
 .form__buttonsContainer button,
 .form__buttonsContainer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30%;
   padding: 1%;
   border: none;
@@ -122,6 +126,18 @@ explicación:
 
 .form__buttonsContainerSave:hover {
   background-color: rgb(65, 99, 13);
+  font-weight: bold;
+}
+
+.form__buttonsContainerCerrarSesion {
+  background-color: #ccc;
+  color: #000;
+  
+}
+
+.form__buttonsContainerCerrarSesion:hover {
+  background-color: #494949;
+  color: #ffffff;
   font-weight: bold;
 }
 
