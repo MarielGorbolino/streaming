@@ -111,6 +111,18 @@
   font-weight: bold;
 }
 
+.form__buttonsContainerSave:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.creditCardCode:disabled,
+.creditCard:disabled,
+.metodoPago:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .form__buttonsContainerSave {
   background-color: rgb(101, 155, 20);
 }
