@@ -32,7 +32,7 @@
   display: flex;
   flex: auto;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 0.975rem;
 }
 
 .form__pago {
@@ -130,6 +130,13 @@
 .form__buttonsContainerSave:hover {
   background-color: rgb(65, 99, 13);
   font-weight: bold;
+}
+
+.js-error-message {
+  color: red;
+  font-size: 0.825rem;
+  display: block;
+  min-height: 0.25rem; /* Altura reservada */
 }
 
 @media ((width <= 1024px) and (width >= 768px)) {

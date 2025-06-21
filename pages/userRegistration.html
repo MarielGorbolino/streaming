@@ -28,7 +28,9 @@
                 type="text"
                 name="name"
                 placeholder="Nombre de usuario"
-            /></label>
+              />
+            </label>
+            <span class="js-error-message" id="error-name"></span>
             <label for="js-surName"
               >Apellido
               <input
@@ -36,7 +38,9 @@
                 type="text"
                 name="surName"
                 placeholder="Ingrese apellido"
-            /></label>
+              />
+            </label>
+            <span class="js-error-message" id="error-surName"></span>
             <label for="js-email"
               >E-mail
               <input
@@ -44,16 +48,20 @@
                 type="text"
                 name="email"
                 placeholder="Ingrese email"
-            /></label>
-            <label for="userName"
+              />
+            </label>
+            <span class="js-error-message" id="error-email"></span>
+            <label for="js-nickName"
               >Nombre de usuario
               <input
-                id="userName"
+                id="js-nickName"
                 type="email"
                 novalidate
                 name="userName"
                 placeholder="Nombre de usuario"
-            /></label>
+              />
+            </label>
+            <span class="js-error-message" id="error-nickName"></span>
             <label for="js-password"
               >Contraseña
               <input
@@ -61,7 +69,9 @@
                 type="password"
                 name="password"
                 placeholder="Contraseña"
-            /></label>
+              />
+            </label>
+            <span class="js-error-message" id="error-password"></span>
             <label for="js-repeatPassword"
               >Repetir contraseña
               <input
@@ -69,7 +79,9 @@
                 type="password"
                 name="repeatPassword"
                 placeholder="Ingrese nueva contraseña"
-            /></label>
+              />
+            </label>
+            <span class="js-error-message" id="error-repeatPassword"></span>
           </div>
           <div class="form__pago">
             <p>Método de pago</p>
@@ -101,6 +113,8 @@
                 disabled
               />
             </div>
+            <span class="js-error-message" id="error-creditCard"></span>
+            <span class="js-error-message" id="error-creditCardCode"></span>
 
             <label
               ><input

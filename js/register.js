@@ -2,6 +2,7 @@ function checkFormValidity() {
   const buttonSubmit = document.getElementById("js-buttonSubmit");
   const userName = document.getElementById("js-name");
   const userLastName = document.getElementById("js-surName");
+  const userNickName = document.getElementById("js-nickName");
   const email = document.getElementById("js-email");
   const password = document.getElementById("js-password");
   const repeatPassword = document.getElementById("js-repeatPassword");
@@ -12,6 +13,9 @@ function checkFormValidity() {
   const inputPagoFacil = document.getElementById("js-pagoFacil");
 
   const regexLetters = /^[a-zA-Z]+$/;
+  const regexLettersAndNumbers = /^[a-zA-Z0-9]+$/;
+
+  // Regex para validar el nickNAme solo acepta letras y numeros
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const regexCreditCardCode = /^[1-9]{3}$/;
   const regexCreditCard = /^\d{16}$/;
@@ -21,6 +25,7 @@ function checkFormValidity() {
   const isEmailValid = emailRegex.test(email.value);
   const isPasswordValid = validarPassword(password.value);
   const isRepeatPasswordValid = password.value === repeatPassword.value;
+  const isNickNameValid = regexLettersAndNumbers.test(userNickName.value);
 
   let isPaymentMethodCreditCard = false;
   let isPaymentMethodcuponPago = false;
@@ -66,6 +71,7 @@ function checkFormValidity() {
     isNameValid &&
     isLastNameValid &&
     isEmailValid &&
+    isNickNameValid &&
     isPasswordValid &&
     isRepeatPasswordValid
   ) {
@@ -77,7 +83,39 @@ function checkFormValidity() {
       isFormValid = true; // Si no es tarjeta de crédito, el formulario es válido
     }
   }
-  console.log(isFormValid);
+
+  document.getElementById("error-name").textContent = isNameValid
+    ? ""
+    : "Nombre inválido. Solo letras.";
+  document.getElementById("error-surName").textContent = isLastNameValid
+    ? ""
+    : "Apellido inválido. Solo letras.";
+  document.getElementById("error-email").textContent = isEmailValid
+    ? ""
+    : "Email inválido.";
+
+  document.getElementById("error-nickName").textContent = isNickNameValid
+    ? ""
+    : "El nickName solo puede contener letras y números.";
+    
+
+  document.getElementById("error-password").textContent = isPasswordValid
+    ? ""
+    : "La contraseña debe tener 8 caracteres con mínimo 2 letras, 2 números y 2 especiales.";
+  document.getElementById("error-repeatPassword").textContent =
+    isRepeatPasswordValid ? "" : "Las contraseñas no coinciden.";
+
+  if (isPaymentMethodCreditCard) {
+    document.getElementById("error-creditCard").textContent =
+      isCreditCardNumberValid ? "" : "Número de tarjeta inválido.";
+    document.getElementById("error-creditCardCode").textContent =
+      isCreditCardCodeValid
+        ? ""
+        : "Código inválido. Deben ser 3 dígitos del 1 al 9.";
+  } else {
+    document.getElementById("error-creditCard").textContent = "";
+    document.getElementById("error-creditCardCode").textContent = "";
+  }
 
   buttonSubmit.disabled = !isFormValid;
 }
