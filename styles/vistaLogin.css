@@ -141,6 +141,14 @@
   }
 }
 
+.login__button:disabled{
+  background-color: #696969;
+  
+  opacity: 0.6;
+}
+
+
+
 /* Para Tablet 768 px*/
 @media screen and (max-width: 64em) and (min-width: 47em) {
   .banner-texto__h2 {
