@@ -91,10 +91,9 @@
             <label for="payment"
               ><input
                 class="js-payment"
-                id="payment"
                 type="radio"
                 name="payment"
-                value="creditCard"
+                value="tarjetaCredito"
                 required
               />
               Tarjeta de crédito</label
@@ -122,7 +121,7 @@
                 class="js-payment"
                 type="radio"
                 name="payment"
-                value="cupon_pago"
+                value="cuponPago"
                 checked
               />
               Cupón de pago</label
@@ -154,7 +153,7 @@
                 class="js-payment"
                 type="radio"
                 name="payment"
-                value="bank"
+                value="transferencia"
               />
               Transferencia bancaria</label
             >
@@ -163,17 +162,26 @@
         </div>
         <!-- Contenedor con botonces guardar cambios y cancelar subsripción (Punto 6 y 7) -->
         <div class="form__buttonsContainer">
-          <a
-            href="./userRegistration.html"
+          <button
+            id="js-cancel-subscription-button"
             class="form__buttonsContainerCancel"
           >
             Cancelar subscripción
-          </a>
-          <button type="submit" class="form__buttonsContainerSave">
+          </button>
+          <button
+            id="js-save-button"
+            type="submit"
+            class="form__buttonsContainerSave"
+            disabled
+          >
             Guardar cambios
           </button>
-          <a href="../index.html" class="form__buttonsContainerCerrarSesion"
-            >Cerrar sesion</a
+          <button
+            id="js-logout-button"
+            class="form__buttonsContainerCerrarSesion"
+          >
+            Cerrar sesion
+          </button>
           >
         </div>
       </form>

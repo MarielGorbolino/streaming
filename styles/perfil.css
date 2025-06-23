@@ -130,13 +130,17 @@ explicación:
 .form__buttonsContainerCerrarSesion {
   background-color: #ccc;
   color: #000;
-  
 }
 
 .form__buttonsContainerCerrarSesion:hover {
   background-color: #494949;
   color: #ffffff;
   font-weight: bold;
+}
+
+#js-save-button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* Estilos para tablets o notebook con pantalla chica/mediana */
@@ -176,9 +180,9 @@ explicación:
   }
 
   .formContainer {
-      grid-template-columns: 1fr;
-      justify-items: center;
-    }
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 
   .form__user__info,
   .form__pago {
