@@ -57,19 +57,19 @@
           src="../assets/profile/profile_photo.png"
           alt="Icono del perfil del usuario"
         />
-        <p>Nombre de usuario</p>
+        <p id="js-username"></p>
       </div>
       <!-- Formulario -->
-      <form class="form" action="./home.html">
+      <form id="js-form-perfil" class="form" action="./home.html">
         <div class="formContainer">
           <!-- Contenedor con Email contraseña e inputs resetear contraseña y repetir contraseña (Punto 1, 3, 4) -->
           <div class="form__user__info">
-            <p>E-mail <span>usuario@gmail.com</span></p>
+            <p>E-mail <span id="js-email"></span></p>
             <p>Contraseña <span>****************</span></p>
             <label for="newPassword"
               >Nueva contraseña
               <input
-                id="newPassword"
+                id="js-password"
                 type="password"
                 name="newPassword"
                 placeholder="Ingrese nueva contraseña"
@@ -78,7 +78,7 @@
             <label for="repeatPassword"
               >Repetir contraseña
               <input
-                id="repeatPassword"
+                id="js-repeatPassword"
                 type="password"
                 name="repeatPassword"
                 placeholder="Ingrese nueva contraseña"
@@ -90,6 +90,7 @@
             <p>Método de pago</p>
             <label for="payment"
               ><input
+                class="js-payment"
                 id="payment"
                 type="radio"
                 name="payment"
@@ -100,14 +101,14 @@
             >
             <div class="pago__tarjeta">
               <input
-                id="creditCard"
+                id="js-creditCard"
                 name="creditCard"
                 type="number"
                 placeholder="Número de tarjeta"
                 required
               />
               <input
-                id="creditCardCode"
+                id="js-creditCardCode"
                 name="creditCardCode"
                 type="number"
                 placeholder="XXX"
@@ -117,28 +118,45 @@
             </div>
 
             <label
-              ><input type="radio" name="payment" value="cupon_pago" checked />
+              ><input
+                class="js-payment"
+                type="radio"
+                name="payment"
+                value="cupon_pago"
+                checked
+              />
               Cupón de pago</label
             >
             <div class="pago__cupon">
               <label
                 ><input
+                  id="js-pagoFacil"
                   name="cupon_pago"
-                  value="pagoFAcil"
+                  value="pagoFacil"
                   type="radio"
                   checked
                 />
                 Pago fácil</label
               >
               <label
-                ><input type="radio" name="cupon_pago" value="rapiPago" />
+                ><input
+                  id="js-rapiPago"
+                  type="radio"
+                  name="cupon_pago"
+                  value="rapiPago"
+                />
                 RapiPago</label
               >
             </div>
 
             <label
-              ><input type="radio" name="payment" value="bank" /> Transferencia
-              bancaria</label
+              ><input
+                class="js-payment"
+                type="radio"
+                name="payment"
+                value="bank"
+              />
+              Transferencia bancaria</label
             >
             <p>CBU : 2183909411100018971375</p>
           </div>
@@ -154,9 +172,13 @@
           <button type="submit" class="form__buttonsContainerSave">
             Guardar cambios
           </button>
-          <a href="../index.html" class="form__buttonsContainerCerrarSesion">Cerrar sesion</a>
+          <a href="../index.html" class="form__buttonsContainerCerrarSesion"
+            >Cerrar sesion</a
+          >
         </div>
       </form>
     </main>
+
+    <script src="../js/perfil.js"></script>
   </body>
 </html>
