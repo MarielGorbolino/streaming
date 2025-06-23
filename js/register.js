@@ -1,3 +1,17 @@
+const user = {
+  name: null,
+  surName: null,
+  nickName: null,
+  email: null,
+  password: null,
+  paymentMethod: null,
+  creditCard: null,
+  creditCardCode: null,
+  rapiPago: null,
+  pagoFacil: null,
+  cbu: null,
+};
+
 function checkFormValidity() {
   const buttonSubmit = document.getElementById("js-buttonSubmit");
   const userName = document.getElementById("js-name");
@@ -29,6 +43,7 @@ function checkFormValidity() {
 
   let isPaymentMethodCreditCard = false;
   let isPaymentMethodcuponPago = false;
+  let isPaymenyMethodCBU = false;
   let isCreditCardNumberValid = false;
   let isCreditCardCodeValid = false;
 
@@ -40,6 +55,10 @@ function checkFormValidity() {
         inputPagoFacil.disabled = false;
       }
 
+      if (method.value === "transferencia") {
+        isPaymenyMethodCBU = true;
+      }
+
       if (method.value === "tarjetaCredito") {
         isPaymentMethodCreditCard = true;
         creditCardCode.disabled = false;
@@ -49,8 +68,6 @@ function checkFormValidity() {
           regexCreditCard
         );
         isCreditCardCodeValid = regexCreditCardCode.test(creditCardCode.value);
-
-        console.log(isCreditCardCodeValid, isCreditCardNumberValid);
       }
     }
   });
@@ -75,13 +92,31 @@ function checkFormValidity() {
     isPasswordValid &&
     isRepeatPasswordValid
   ) {
+    user.name = userName.value;
+    user.surName = userLastName.value;
+    user.nickName = userNickName.value;
+    user.email = email.value;
+    user.password = password.value;
+
     if (isPaymentMethodCreditCard) {
       if (isCreditCardNumberValid && isCreditCardCodeValid) {
         isFormValid = true; // El formulario es válido si todos los campos son correctos
+        user.paymentMethod = "tarjetaCredito";
+        user.creditCard = creditCardNumber.value;
+        user.creditCardCode = creditCardCode.value;
       }
     } else {
       isFormValid = true; // Si no es tarjeta de crédito, el formulario es válido
+      if (isPaymentMethodcuponPago) {
+        user.paymentMethod = "cuponPago";
+        user.rapiPago = inputRapipago.checked;
+        user.pagoFacil = inputPagoFacil.checked;
+      }
+      if (isPaymenyMethodCBU) {
+        user.paymentMethod = "transferencia";
+      }
     }
+    console.log("user", user);
   }
 
   document.getElementById("error-name").textContent = isNameValid
@@ -97,7 +132,6 @@ function checkFormValidity() {
   document.getElementById("error-nickName").textContent = isNickNameValid
     ? ""
     : "El nickName solo puede contener letras y números.";
-    
 
   document.getElementById("error-password").textContent = isPasswordValid
     ? ""
@@ -132,6 +166,20 @@ function registerValidation() {
     } else {
       input.addEventListener("input", checkFormValidity);
     }
+  });
+
+  registerForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // Evita el envío del formulario para validar los campos
+
+    if (localStorage.getItem(user.email)) {
+      alert("Ya existe un usuario con este email.");
+      return;
+    }
+
+    localStorage.setItem(user.email, JSON.stringify(user));
+    alert("Usuario registrado correctamente.");
+
+    window.location.href = "/index.html"; // Redirige al index después de registrar
   });
 }
 
