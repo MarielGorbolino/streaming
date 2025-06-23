@@ -19,8 +19,6 @@ function inhabilitarBoton() {
   } else {
     buttonLogin.disabled = false;
   }
-
-  console.log("mail: ", inputEmail.value, "password ", inputPassword.value);
 }
 
 function verificarEmail(emailCompleto) {

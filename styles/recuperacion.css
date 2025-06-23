@@ -57,6 +57,18 @@
   border-radius: 0.5rem;
 }
 
+.form__buttonsContainerEnviar:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.js-error-message {
+  color: red;
+  font-size: 0.825rem;
+  display: block;
+  min-height: 0.25rem; /* Altura reservada */
+}
+
 .form__buttonsContainerEnviar:hover {
   background-color: rgb(65, 99, 13);
   font-weight: bold;
@@ -77,7 +89,7 @@
 
 .form__buttonsContainerEnviar,
 .form__buttonsContainerCancelar {
-  font-size: 0.85rem; 
+  font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {

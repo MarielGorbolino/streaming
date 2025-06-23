@@ -15,10 +15,7 @@
   </head>
   <body>
     <main class="main main__recuperacion">
-      <form
-        class="form form__recuperacion"
-        action="../index.html"
-      >
+      <form class="form form__recuperacion">
         <h2 class="form__title">Recuperar contraseña</h2>
         <div class="formContainer formContainer__recuperacion">
           <label for="email">
@@ -26,33 +23,41 @@
             <input
               type="email"
               name="email"
-              id="email"
+              id="js-input-email"
               placeholder="Ingrese email"
               required
             />
           </label>
-
+          <span class="js-error-message" id="js-email-error"></span>
           <label for="usuario">
             Nombre de usuario
             <input
               type="text"
               name="usuario"
-              id="usuario"
+              id="js-input-userNickName"
               placeholder="Ingrese nombre de usuario"
               required
             />
           </label>
+          <span class="js-error-message" id="js-nick-error"></span>
         </div>
 
         <div class="form__buttonsContainer">
-          <button type="submit" class="form__buttonsContainerEnviar">
-            Enviar email
-          </button>
           <a href="../index.html" class="form__buttonsContainerCancelar">
             Cancelar
           </a>
+          <button
+            id="js-button-send"
+            type="submit"
+            class="form__buttonsContainerEnviar"
+            disabled
+          >
+            Enviar email
+          </button>
         </div>
       </form>
     </main>
+
+    <script src="../js/recuperacion.js"></script>
   </body>
 </html>
