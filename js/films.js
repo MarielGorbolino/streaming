@@ -168,6 +168,7 @@ const peliculasSimilares = [
   }
 ];
 
+let pelicula = null;
 
 function addDefault(peliculaDefault) {
   document.getElementById('titulo').textContent = peliculaDefault.titulo;
@@ -179,26 +180,25 @@ function addDefault(peliculaDefault) {
   document.getElementById('comenzar').href = peliculaDefault.youtube;
 }
 
-function addImage(peliculaDefault) {
+function addImage(titulo) {
   const carrusel = document.getElementById("similaresCarrusel");
   carrusel.innerHTML = ''; // Limpiar contenido anterior
-
   peliculasSimilares
-    .filter(pelicula => pelicula.titulo !== peliculaDefault.titulo)
-      .forEach(pelicula => {
+    .filter(peliculaFillter => peliculaFillter.titulo !== titulo)
+      .forEach(peliculaFillter => {
         const img = document.createElement("img");
-        img.src = pelicula.imagen;
-        img.alt = pelicula.titulo;
+        img.src = peliculaFillter.imagen;
+        img.alt = peliculaFillter.titulo;
         img.classList.add("imagenes");
         carrusel.appendChild(img);
     });
 }
 
-function addActors(peliculaDefault) {
-     const actoresContainer = document.getElementById("actores");
+function addActors(actores) {
+  const actoresContainer = document.getElementById("actores");
   actoresContainer.innerHTML = ""; // limpio contenido previo
 
-  peliculaDefault.actores.forEach((actor, index) => {
+  actores.forEach((actor, index) => {
     const a = document.createElement("a");
     a.href = actor.wiki;
     a.target = "_blank";
@@ -206,7 +206,7 @@ function addActors(peliculaDefault) {
     actoresContainer.appendChild(a);
 
     // Agrego coma y espacio excepto después del último actor
-    if (index < peliculaDefault.actores.length - 1) {
+    if (index < actores.length - 1) {
       actoresContainer.appendChild(document.createTextNode(", "));
     }
   });
@@ -219,8 +219,6 @@ function addVideo(video) {
           window.open(video, '_blank'); // Abre en nueva pestaña
       };
 }
-
-let pelicula = null;
 
 function carruselMove() {
  const carrusel = document.getElementById("similaresCarrusel");
@@ -235,26 +233,30 @@ function carruselMove() {
   next.addEventListener("click", () => {
     carrusel.scrollBy({ left: scroll, behavior: "smooth" }); //  behavior: "smooth" la navegacion sea suave, con efecto
   });
+}
 
+function asignarEventosCarrusel() {
   const imagenes = document.querySelectorAll(".imagenes");
   imagenes.forEach((img) => {
     img.addEventListener("click", () => {
       pelicula = peliculasSimilares.find(imagen => imagen.titulo == img.alt);
-        addDefault(pelicula);
-        addActors(pelicula);
-        addVideo(pelicula.video);
-
+      addDefault(pelicula);
+      addActors(pelicula.actores);
+      addVideo(pelicula.video);
+      addImage(pelicula.titulo);
+      asignarEventosCarrusel();
     });
   });
-
 }
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
   pelicula = peliculasSimilares[0];
-  addDefault(pelicula)
+  addDefault(pelicula);
   addVideo(pelicula.video);
-  addImage(pelicula)
-  addActors(pelicula);
+  addImage(pelicula.titulo);
+  addActors(pelicula.actores);
   carruselMove();
+  asignarEventosCarrusel();
 });

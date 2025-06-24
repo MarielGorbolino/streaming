@@ -338,27 +338,21 @@ function carruselMove() {
   const prev = document.querySelector(".carrusel-btn.prev");
   const next = document.querySelector(".carrusel-btn.next");
   const img = carrusel.querySelector(".imagenes");
-  const scroll = img ? img.offsetWidth + 10 : 0; //img.offsetWidth tamanio de un imagen
+  const scroll = img ? img.offsetWidth + 10 : 0;
+
   prev.addEventListener("click", () => {
     carrusel.scrollBy({ left: -scroll, behavior: "smooth" });
   });
 
   next.addEventListener("click", () => {
-    carrusel.scrollBy({ left: scroll, behavior: "smooth" }); //  behavior: "smooth" la navegacion sea suave, con efecto
+    carrusel.scrollBy({ left: scroll, behavior: "smooth" });
   });
+}
 
-  const imagenes = document.querySelectorAll(".imagenes");
-  imagenes.forEach((img) => {
-    img.addEventListener("click", () => {
-      serie = seriesSimilares.find((imagen) => imagen.titulo == img.alt);
-      addDefault(serie);
-      addTemp(serie);
-      addActors(serie);
-      addVideo(serie.video);
-    });
-  });
+function selectorTemporadas() {
+  const selector = document.getElementById("temporadas");
 
-  document.getElementById("temporadas").addEventListener("change", function () {
+  selector.addEventListener("change", function () {
     const temporadaIndex = this.value;
     const capitulosSelect = document.getElementById("capitulos");
     capitulosSelect.innerHTML =
@@ -376,12 +370,31 @@ function carruselMove() {
   });
 }
 
+function asignarEventosCarruselSeries() {
+  const imagenes = document.querySelectorAll(".imagenes");
+  imagenes.forEach((img) => {
+    img.addEventListener("click", () => {
+      serie = seriesSimilares.find((imagen) => imagen.titulo == img.alt);
+      addDefault(serie);
+      addTemp(serie);
+      addActors(serie);
+      addVideo(serie.video);
+      addImage(serie); // Regeneramos imágenes
+      asignarEventosCarruselSeries(); // Vuelve a asignar eventos a las nuevas imágenes
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   serie = seriesSimilares[0];
+
   addDefault(serie);
   addTemp(serie);
   addVideo(serie.video);
   addImage(serie);
   addActors(serie);
+
   carruselMove();
+  asignarEventosCarruselSeries();
+  selectorTemporadas();
 });
