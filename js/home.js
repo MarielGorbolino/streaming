@@ -61,7 +61,7 @@ const catalogo = [
     tipo: "serie",
     imagen: "../assets/img/la_casa_de_papel_s.jpg",
     enlace: "./serie.html",
-    categoria: "suspenso"
+    categoria: "accion"
   },
   {
     titulo: "Rosario Tijeras",
@@ -85,16 +85,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const filtroTipo = document.getElementById("tipo");
   const filtroCategoria = document.getElementById("category");
 
-  function cargarContenido(tipoSeleccionado) {
+
+  function cargarContenido() {
     contenedor.innerHTML = "";
+    const tipoSeleccionado = filtroTipo.value;
+    const categoriaSeleccionada = filtroCategoria.value;
+
 
     const filtrado = catalogo.filter(item => {
-      return tipoSeleccionado === "todo" || item.tipo === tipoSeleccionado;
+        const coincideTipo = tipoSeleccionado === "todo" || item.tipo === tipoSeleccionado;
+        const coincideCategoria = categoriaSeleccionada === "" || item.categoria === categoriaSeleccionada;
+
+      return coincideTipo && coincideCategoria;
     });
+
+
 
     filtrado.forEach(item => {
       const a = document.createElement("a");
-      
+
      if (item.tipo === "serie") {
         a.href = "./serie.html";
         } 
