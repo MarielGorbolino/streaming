@@ -44,7 +44,7 @@ const seriesSimilares = [
     ],
   },
   {
-    titulo: "La Casa de Papel",
+    titulo: "La Casa De Papel",
     genero: "Acción / Suspenso",
     actores: [
       {
@@ -386,7 +386,11 @@ function asignarEventosCarruselSeries() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  serie = seriesSimilares[0];
+
+  const params = new URLSearchParams(window.location.search);
+  const titulo = params?.get("titulo");
+  console.log(titulo)
+  serie = seriesSimilares.find(a=> a.titulo == titulo) ?? seriesSimilares[0];
 
   addDefault(serie);
   addTemp(serie);
