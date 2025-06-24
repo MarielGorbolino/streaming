@@ -5,26 +5,26 @@ const peliculasSimilares = [
     duracion: "100 min",
     actores: [
       {
-        nombre: "Juan Minujín",
-        wiki: "https://es.wikipedia.org/wiki/Juan_Minuj%C3%ADn"
+        nombre: "Alban Lenoir",
+        wiki: "https://en-m-wikipedia-org.translate.goog/wiki/Alban_Lenoir?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"
       },
       {
-        nombre: "Nicolás Furtado",
-        wiki: "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Furtado"
+        nombre: "Stéfi Celma",
+        wiki: "https://en-m-wikipedia-org.translate.goog/wiki/Stéfi_Celma?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"
       },
       {
-        nombre: "Claudio Rissi",
-        wiki: "https://es.wikipedia.org/wiki/Claudio_Rissi"
+        nombre: "Nicolas Duvauchelle",
+        wiki: "https://es.wikipedia.org/wiki/Nicolas_Duvauchelle"
       },
       {
-        nombre: "Gerardo Romano",
-        wiki: "https://es.wikipedia.org/wiki/Gerardo_Romano_(actor)"
+        nombre: "Rod Paradot",
+        wiki: "https://es.wikipedia.org/wiki/Rod_Paradot"
       },
     ],
-    descripcion: "Un expolicía se infiltra en una cárcel peligrosa para investigar un secuestro, enfrentando un entorno brutal.",
+    descripcion: "El mecánico Lino es un apasionado de los autos de combate, pero cuando se enfrenta a policías corruptos, éstos le ofrecen un trato que no puede rechazar.",
     imagen: "../assets/img/bala_perdida_3.jpg",
-    video: "https://www.youtube.com/embed/mN7xQF3hO1M",
-    youtube: "https://www.youtube.com/watch?v=mN7xQF3hO1M&t=2s&pp=2AECkAIB"
+    video: "https://www.youtube.com/embed/RiYlMuK_RQA",
+    youtube: "https://www.youtube.com/watch?v=RiYlMuK_RQA"
   },
   {
     titulo: "Contraataque",
@@ -32,27 +32,27 @@ const peliculasSimilares = [
     duracion: "120 min",
     actores: [
       {
-        nombre: "Juan Minujín",
-        wiki: "https://es.wikipedia.org/wiki/Juan_Minuj%C3%ADn"
+        nombre: "Luis Curiel",
+        wiki: "https://doblaje.fandom.com/es/wiki/Luis_Curiel"
       },
       {
-        nombre: "Nicolás Furtado",
-        wiki: "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Furtado"
+        nombre: "Luis Alberti",
+        wiki: "https://es.wikipedia.org/wiki/Luis_Alberti_(actor)"
       },
       {
-        nombre: "Claudio Rissi",
-        wiki: "https://es.wikipedia.org/wiki/Claudio_Rissi"
+        nombre: "Ishbel Bautista",
+        wiki: "https://es.wikipedia.org/wiki/Ishbel_Bautista"
       },
       {
-        nombre: "Gerardo Romano",
-        wiki: "https://es.wikipedia.org/wiki/Gerardo_Romano_(actor)"
+        nombre: "Mayra Batalla",
+        wiki: "https://es.wikipedia.org/wiki/Mayra_Batalla"
       },
     ],
     actores2: "Álvaro Morte, Úrsula Corberó, Pedro Alonso, Itziar Ituño",
-    descripcion: "Un grupo de criminales ejecuta el mayor atraco de la historia bajo las órdenes del misterioso Profesor.",
+    descripcion: "Un escuadrón de élite cae en una emboscada a manos de un enemigo implacable y se ve obligado a defenderse con sus dos únicas armas: el ingenio y un fuerte espíritu de camaradería.",
     imagen: "../assets/img/contraataque.jpg",
-    video: "https://www.youtube.com/embed/3y-6iaveY6c",
-    youtube: "https://www.youtube.com/watch?v=3y-6iaveY6c&t=2s&pp=2AECkAIB"
+    video: "https://www.youtube.com/embed/n3YkEva36gs",
+    youtube: "https://www.youtube.com/watch?v=n3YkEva36gs"
   },
   {
     titulo: "De vuelta a la accion",
@@ -60,27 +60,27 @@ const peliculasSimilares = [
     duracion: "90 min",
     actores: [
       {
-        nombre: "Juan Minujín",
-        wiki: "https://es.wikipedia.org/wiki/Juan_Minuj%C3%ADn"
+        nombre: "Cameron Diaz",
+        wiki: "https://es.wikipedia.org/wiki/Cameron_Diaz"
       },
       {
-        nombre: "Nicolás Furtado",
-        wiki: "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Furtado"
+        nombre: "Jamie Foxx",
+        wiki: "https://es.wikipedia.org/wiki/Jamie_Foxx"
       },
       {
-        nombre: "Claudio Rissi",
-        wiki: "https://es.wikipedia.org/wiki/Claudio_Rissi"
+        nombre: "Glenn Close",
+        wiki: "https://es.wikipedia.org/wiki/Glenn_Close"
       },
       {
-        nombre: "Gerardo Romano",
-        wiki: "https://es.wikipedia.org/wiki/Gerardo_Romano_(actor)"
+        nombre: "Leela Owen",
+        wiki: "https://www.imdb.com/es/name/nm10235676/"
       },
     ],
     actores2: "Sofía Ramírez, Lucas Díaz, Camila Ortega",
-    descripcion: "Un grupo de adolescentes atraviesa los desafíos del colegio, las relaciones y la búsqueda de identidad en una ciudad moderna.",
+    descripcion: "Los exagentes de la CIA, Emily y Matt, se ven arrastrados de nuevo al espionaje tras la publicación de sus identidades secretas.",
     imagen: "../assets/img/de_vuelta_a_la_accion.jpg",
-    video: "https://www.youtube.com/embed/QFxl7FFv6lM",
-    youtube: "https://www.youtube.com/watch?v=QFxl7FFv6lM&t=2s&pp=2AECkAIB"
+    video: "https://www.youtube.com/embed/2_CLtBIWdkM",
+    youtube: "https://www.youtube.com/watch?v=2_CLtBIWdkM"
   },
   {
     titulo: "Gt Max",
@@ -88,27 +88,27 @@ const peliculasSimilares = [
     duracion: "119 min",
     actores: [
       {
-        nombre: "Juan Minujín",
-        wiki: "https://es.wikipedia.org/wiki/Juan_Minuj%C3%ADn"
+        nombre: "Ava Baya",
+        wiki: "https://www.filmaffinity.com/es/name.php?name-id=911657410"
       },
       {
-        nombre: "Nicolás Furtado",
-        wiki: "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Furtado"
+        nombre: "Just Riadh",
+        wiki: "https://simple-m-wikipedia-org.translate.goog/wiki/Just_Riadh?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"
       },
       {
-        nombre: "Claudio Rissi",
-        wiki: "https://es.wikipedia.org/wiki/Claudio_Rissi"
+        nombre: "Jalil Lespert",
+        wiki: "https://en-m-wikipedia-org.translate.goog/wiki/Jalil_Lespert?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"
       },
       {
-        nombre: "Gerardo Romano",
-        wiki: "https://es.wikipedia.org/wiki/Gerardo_Romano_(actor)"
+        nombre: "Jérémie Laheurte",
+        wiki: "https://www.imdb.com/es/name/nm5398167/"
       },
     ],
     actores2: "William Levy, Laura Londoño, Carmen Villalobos",
-    descripcion: "La historia de amor entre Gaviota, una recolectora de café, y Sebastián, un joven de familia cafetera, llena de obstáculos y pasiones.",
+    descripcion: "Una infame pandilla de ladrones motociclistas recluta al hermano de una excampeona de motocross para un robo, por lo que ahora ella debe enfrentar sus mayores miedos para protegerlo de las calles de París.",
     imagen: "../assets/img/gt_max_p.jpg",
-    video: "https://www.youtube.com/embed/ufs8NhLBuCk",
-    youtube: "https://www.youtube.com/watch?v=ufs8NhLBuCk&t=2s&pp=2AECkAIB"
+    video: "https://www.youtube.com/embed/Zs0uKHrVRws",
+    youtube: "https://www.youtube.com/watch?v=Zs0uKHrVRws"
   },
   {
     titulo: "Sindicato",
@@ -116,27 +116,27 @@ const peliculasSimilares = [
     duracion: "134 min",
     actores: [
       {
-        nombre: "Juan Minujín",
-        wiki: "https://es.wikipedia.org/wiki/Juan_Minuj%C3%ADn"
+        nombre: "Halle Berry",
+        wiki: "https://es.wikipedia.org/wiki/Halle_Berry"
       },
       {
-        nombre: "Nicolás Furtado",
-        wiki: "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Furtado"
+        nombre: "Mark Wahlberg",
+        wiki: "https://es.wikipedia.org/wiki/Mark_Wahlberg"
       },
       {
-        nombre: "Claudio Rissi",
-        wiki: "https://es.wikipedia.org/wiki/Claudio_Rissi"
+        nombre: "Dana Delany",
+        wiki: "https://es.wikipedia.org/wiki/Dana_Delany"
       },
       {
-        nombre: "Gerardo Romano",
-        wiki: "https://es.wikipedia.org/wiki/Gerardo_Romano_(actor)"
+        nombre: "Jessica De Gouw",
+        wiki: "https://es.wikipedia.org/wiki/Jessica_De_Gouw"
       },
     ],
     actores2: "Bárbara de Regil, José María de Tavira, Antonio Gaona",
-    descripcion: "Rosario, una joven de barrio humilde, se convierte en una mujer peligrosa en busca de justicia mientras lucha entre el amor y la venganza.",
+    descripcion: "Mike, un trabajador de la construcción con los pies en la tierra, se ve inmerso en el mundo de los superespías y los agentes secretos cuando Roxanne, su novia del instituto, le recluta para una misión de los servicios de inteligencia estadounidenses.",
     imagen: "../assets/img/sindicato_p.jpg",
-    video: "https://www.youtube.com/embed/otZeqKDOXrg",
-    youtube: "https://www.youtube.com/watch?v=otZeqKDOXrg&t=2s&pp=2AECkAIB"
+    video: "https://www.youtube.com/embed/oFDLwkL54jQ",
+    youtube: "https://www.youtube.com/watch?v=oFDLwkL54jQ"
   },
   {
     titulo: "Estragos",
@@ -144,27 +144,27 @@ const peliculasSimilares = [
     duracion: "200 min",
     actores: [
       {
-        nombre: "Juan Minujín",
-        wiki: "https://es.wikipedia.org/wiki/Juan_Minuj%C3%ADn"
+        nombre: "Tom Hardy",
+        wiki: "https://es.wikipedia.org/wiki/Tom_Hardy"
       },
       {
-        nombre: "Nicolás Furtado",
-        wiki: "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Furtado"
+        nombre: "Jessie Mei Li",
+        wiki: "https://es.wikipedia.org/wiki/Jessie_Mei_Li"
       },
       {
-        nombre: "Claudio Rissi",
-        wiki: "https://es.wikipedia.org/wiki/Claudio_Rissi"
+        nombre: "Timothy Olyphant",
+        wiki: "https://es.wikipedia.org/wiki/Timothy_Olyphant"
       },
       {
-        nombre: "Gerardo Romano",
-        wiki: "https://es.wikipedia.org/wiki/Gerardo_Romano_(actor)"
+        nombre: "Forest Whitaker",
+        wiki: "https://es.wikipedia.org/wiki/Forest_Whitaker"
       },
     ],
     actores2: "Bárbara de Regil, José María de Tavira, Antonio Gaona",
-    descripcion: "Rosario, una joven de barrio humilde, se convierte en una mujer peligrosa en busca de justicia mientras lucha entre el amor y la venganza.",
+    descripcion: "Cuando un negocio de drogas sale mal, un hastiado policía se abre paso en el submundo criminal de una ciudad corrupta para salvar al hijo de un político.",
     imagen: "../assets/img/estragos.jpg",
-    video: "https://www.youtube.com/embed/otZeqKDOXrg",
-    youtube: "https://www.youtube.com/watch?v=otZeqKDOXrg&t=2s&pp=2AECkAIB"
+    video: "https://www.youtube.com/embed/g1Po7unlsXY",
+    youtube: "https://www.youtube.com/watch?v=g1Po7unlsXY"
   }
 ];
 
