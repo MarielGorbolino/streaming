@@ -312,56 +312,68 @@ function addTemp(serieDefault) {
 let serie = null;
 
 function carruselMove() {
- const carrusel = document.getElementById("similaresCarrusel");
+  const carrusel = document.getElementById("similaresCarrusel");
   const prev = document.querySelector(".carrusel-btn.prev");
   const next = document.querySelector(".carrusel-btn.next");
   const img = carrusel.querySelector(".imagenes");
-  const scroll = img ? img.offsetWidth + 10 : 0; //img.offsetWidth tamanio de un imagen
+  const scroll = img ? img.offsetWidth + 10 : 0;
+
   prev.addEventListener("click", () => {
     carrusel.scrollBy({ left: -scroll, behavior: "smooth" });
   });
 
   next.addEventListener("click", () => {
-    carrusel.scrollBy({ left: scroll, behavior: "smooth" }); //  behavior: "smooth" la navegacion sea suave, con efecto
+    carrusel.scrollBy({ left: scroll, behavior: "smooth" });
   });
+}
 
+
+function selectorTemporadas() {
+  const selector = document.getElementById("temporadas");
+
+  selector.addEventListener("change", function () {
+    const temporadaIndex = this.value;
+    const capitulosSelect = document.getElementById("capitulos");
+    capitulosSelect.innerHTML = '<option value="">Seleccionar capítulo</option>';
+
+    if (serie && temporadaIndex !== "") {
+      const temporada = serie.temporadas[temporadaIndex];
+      temporada.capitulos.forEach((cap, index) => {
+        const opt = document.createElement("option");
+        opt.value = index;
+        opt.textContent = cap.titulo;
+        capitulosSelect.appendChild(opt);
+      });
+    }
+  });
+}
+
+function asignarEventosCarruselSeries() {
   const imagenes = document.querySelectorAll(".imagenes");
   imagenes.forEach((img) => {
     img.addEventListener("click", () => {
       serie = seriesSimilares.find(imagen => imagen.titulo == img.alt);
-        addDefault(serie);
-        addTemp(serie);
-        addActors(serie);
-        addVideo(serie.video);
-
+      addDefault(serie);
+      addTemp(serie);
+      addActors(serie);
+      addVideo(serie.video);
+      addImage(serie); // Regeneramos imágenes
+      asignarEventosCarruselSeries(); // Vuelve a asignar eventos a las nuevas imágenes
     });
   });
-      
-      document.getElementById("temporadas").addEventListener("change", function () {
-      const temporadaIndex = this.value;
-      const capitulosSelect = document.getElementById("capitulos");
-      capitulosSelect.innerHTML = '<option value="">Seleccionar capítulo</option>';
-
-      if (serie && temporadaIndex !== "") {
-        const temporada = serie.temporadas[temporadaIndex];
-        temporada.capitulos.forEach((cap, index) => {
-          const opt = document.createElement("option");
-          opt.value = index;
-          opt.textContent = cap.titulo;
-          capitulosSelect.appendChild(opt);
-        });
-      }
-    });
-
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  serie = seriesSimilares[0];
-  addDefault(serie)
-  addTemp(serie)
+serie = seriesSimilares[0];
+
+  addDefault(serie);
+  addTemp(serie);
   addVideo(serie.video);
-  addImage(serie)
+  addImage(serie);
   addActors(serie);
+
   carruselMove();
+  asignarEventosCarruselSeries();
+  selectorTemporadas();
 });
