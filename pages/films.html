@@ -51,78 +51,46 @@
     <main class="main">
       <div class="descriptionConteiner">
         <div class="descriptionConteinerImg">
-          <iframe
-            src="https://www.youtube.com/embed/AlinTKAGENQ"
+          <iframe id="trailer"
             title="films"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           >
           </iframe>
           <button
             type="button"
-            onclick="window.location.href='https://www.youtube.com/watch?v=AlinTKAGENQ&t=2s'"
-          >
+            id="comenzar">
             Comenzar
           </button>
         </div>
         <div class="descriptionConteinerText">
-          <div class="info">
+           <div class="info">
             <span class="label">Título:</span>
-            <span class="value">Bala perdida 3</span>
+            <span class="value" id="titulo">Cargando...</span>
           </div>
           <div class="info">
             <span class="label">Duración:</span>
-            <span class="value">112 min</span>
+            <span class="value" id="duracion">Cargando...</span>
           </div>
           <div class="info">
             <span class="label">Género:</span>
-            <span class="value">Acción</span>
+            <span class="value" id="genero">Cargando...</span>
           </div>
           <div class="info">
             <span class="label">Actores:</span>
-            <span class="value">
-              <a
-                href="https://en.wikipedia.org/wiki/Alban_Lenoir"
-                target="_blank"
-                >Alban Lenoir,
-              </a>
-              <a
-                href="https://es.wikipedia.org/wiki/Nicolas_Duvauchelle"
-                target="_blank"
-                >Nicolas Duvauchelle,
-              </a>
-              <a
-                href="https://en.wikipedia.org/wiki/St%C3%A9fi_Celma"
-                target="_blank"
-                >Stéfi Celma</a
-              >
-            </span>
+            <span class="value" id="actores">Cargando...</span>
           </div>
-          <p>
-            En la última entrega de esta trilogía, Lino, el genio de los autos,
-            regresa para saldar cuentas con Areski y el comandante corrupto que
-            destrozó sus vidas.
-          </p>
+           <p id="descripcion">Cargando...</p>
         </div>
       </div>
       <h1>Similares</h1>
-      <div class="grid__container">
-        <a href="../pages/serie.html"
-          ><img src="../assets/img/adolescencia_s.jpg" alt="Adolescencia"
-        /></a>
-        <a href="../pages/serie.html"
-          ><img src="../assets/img/eternauta_s.jpg" alt="Eternauta"
-        /></a>
-        <a href="../pages/films.html"
-          ><img
-            src="../assets/img/de_vuelta_a_la_accion.jpg"
-            alt="De vuelta a la acción"
-        /></a>
-        <a href="../pages/films.html"
-          ><img src="../assets/img/gt_max_p.jpg" alt="Gt Max"
-        /></a>
-      </div>
+     
+        <div class="carrusel-container">
+          <button class="carrusel-btn prev">&#10094;</button>
+            <div class="carrusel" id="similaresCarrusel"></div>
+          <button class="carrusel-btn next">&#10095;</button>
+        </div>
     </main>
+    <script src="../js/films.js"></script>
   </body>
 </html>
