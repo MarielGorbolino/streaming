@@ -51,88 +51,59 @@
     <main class="main">
       <div class="descriptionConteiner">
         <div class="descriptionConteinerImg">
-          <iframe
-            src="https://www.youtube.com/embed/QFxl7FFv6lM"
+          <iframe id="trailer"
             title="films"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           >
           </iframe>
           <button
             type="button"
-            onclick="window.location.href='https://www.youtube.com/watch?v=QFxl7FFv6lM&t=2s'"
-          >
+            id="comenzar">
             Comenzar
           </button>
         </div>
         <div class="descriptionConteinerText">
+
           <div class="info">
             <span class="label">Título:</span>
-            <span class="value">Adolescencia</span>
+            <span class="value" id="titulo">Cargando...</span>
           </div>
+
           <div class="info2">
             <span class="label">Temporadas:</span>
-            <select class="category" name="category" id="category">
+            <select class="temporadas" name="temporadas" id="temporadas">
               <option value="">Seleccionar temporada</option>
-              <option value="temporada1">Temporada 1</option>
-              <option value="temporada2">Temporada 2</option>
-              <option value="temporada3">Temporada 3</option>
             </select>
             <span class="label">Capitulo:</span>
-            <select class="category" name="category" id="category">
+            <select class="capitulos" name="capitulos" id="capitulos">
               <option value="">Seleccionar capitulo</option>
-              <option value="capitulo1">Capítulo 1: El inicio</option>
-              <option value="capitulo2">Capítulo 2: La verdad</option>
-              <option value="capitulo3">Capítulo 3: Revelaciones</option>
             </select>
           </div>
+
           <div class="info">
             <span class="label">Género:</span>
-            <span class="value">Dramas</span>
+            <span class="value" id="genero">Cargando...</span>
           </div>
+
           <div class="info">
             <span class="label">Actores:</span>
-            <span class="value">
-              <a
-                href="https://es.wikipedia.org/wiki/Stephen_Graham"
-                target="_blank"
-                >Stephen Graham,
-              </a>
-              <a
-                href="https://es.wikipedia.org/wiki/Erin_Doherty"
-                target="_blank"
-                >Erin Doherty,
-              </a>
-              <a href="https://es.wikipedia.org/wiki/Asher_D" target="_blank"
-                >Asher D
-              </a>
-            </span>
+            <span class="value" id="actores"></span>
           </div>
-          <p>
-            Cuando un chico de 13 años es acusado de asesinar a una compañera de
-            clase, su familia, su terapeuta y el detective a cargo se preguntan
-            qué pasó en realidad.
-          </p>
+
+          <p id="descripcion">Cargando...</p>
         </div>
+
       </div>
       <h1>Similares</h1>
-      <div class="grid__container">
-        <a href="../pages/films.html"
-          ><img src="../assets/img/contraataque.jpg" alt="Contraataque"
-        /></a>
-        <a href="../pages/films.html"
-          ><img src="../assets/img/sindicato_p.jpg" alt="Sindicato"
-        /></a>
-        <a href="../pages/serie.html"
-          ><img src="../assets/img/el_marginal_s.jpg" alt="El marginal"
-        /></a>
-        <a href="../pages/serie.html"
-          ><img
-            src="../assets/img/la_casa_de_papel_s.jpg"
-            alt="La Casa De Papel"
-        /></a>
+
+      <div class="carrusel-container">
+        <button class="carrusel-btn prev">&#10094;</button>
+          <div class="carrusel" id="similaresCarrusel"></div>
+        <button class="carrusel-btn next">&#10095;</button>
       </div>
+
     </main>
+    <script src="../js/serie.js"></script>
   </body>
 </html>
