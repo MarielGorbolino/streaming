@@ -92,6 +92,21 @@
   font-size: 0.85rem;
 }
 
+.message {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.error {
+  color: #e63946; /* rojo */
+}
+
+.exito {
+  color: #2a9d8f; /* verde */
+}
+
 @media (max-width: 768px) {
   .form__recuperacion {
     width: 90%;

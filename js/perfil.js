@@ -26,7 +26,6 @@ function editProfile() {
   const errorCreditCard = document.getElementById("error-creditCard");
   const errorCreditCardCode = document.getElementById("error-creditCardCode");
 
-  
   /* Mostramos el nombre de usuario y email de forma dinámica */
   /* acá decimos que si existe user.nickName que lo muestre si no muestra usuario no encontrado. La evaluación de la expresión se detiene tan pronto como se puede determinar el resultado final con || o && */
   username.textContent = user.nickName || "Usuario no encontrado";
@@ -41,7 +40,7 @@ function editProfile() {
   inputsRadio.forEach((input) => {
     /* Si es igual al metodo de pago que se encuentra en session storage marcamos el radio del input*/
     if (input.value === user.paymentMethod) {
-      input.checked = true;// lo marcamos
+      input.checked = true; // lo marcamos
 
       /* Si el usuario eligió tarjeta de crédito como metodo de pago se cargan los datos de la tarjeta */
       if (user.paymentMethod === "tarjetaCredito") {
@@ -53,7 +52,7 @@ function editProfile() {
 
       /* si el usuario eligió cupon de pago marcamos la opción que eligió cuando se registro con los datos de sessión storage */
       if (user.paymentMethod === "cuponPago") {
-        rapiPagoInput.checked = user.rapiPago || false; 
+        rapiPagoInput.checked = user.rapiPago || false;
         pagoFacilInput.checked = user.pagoFacil || false;
         creditCardInput.disabled = true; // deshabilitamos los inputs referidos a la tarjeta de crédito
         creditCardCodeInput.disabled = true;
@@ -89,7 +88,7 @@ function editProfile() {
     const regexCreditCardCode = /^[1-9]{3}$/; // Regex para validar código de tarjeta (3 dígitos del 1 al 9)
     const regexCreditCard = /^\d{16}$/; // Regex para validar número de tarjeta (16 dígitos numéricos)
 
-  /* Validamos las contraseñas y la tarjeta de crédito con funciones */
+    /* Validamos las contraseñas y la tarjeta de crédito con funciones */
     const isPasswordValid = validarPassword(passwordInput.value);
     const isCreditCardNumberValid = validateCreditCard(
       creditCardInput.value,
@@ -101,6 +100,9 @@ function editProfile() {
       creditCardCodeInput.value
     );
 
+    /* Vemos si se selecciono un método de pago y si es valido para habilitar en caso de que la contraseña este vacia */
+    let isPaymentValid = false;
+
     /* Recorremos los inputs con un forEach y habilitamos o deshabilitamos según lo que esta seleccionado */
     inputsRadio.forEach((input) => {
       if (input.checked) {
@@ -109,6 +111,7 @@ function editProfile() {
           pagoFacilInput.disabled = true;
           creditCardInput.disabled = false;
           creditCardCodeInput.disabled = false;
+          isPaymentValid = isCreditCardNumberValid && isCreditCardCodeValid; // devuelve true si los dos son true sino false
         }
 
         if (input.value === "cuponPago") {
@@ -116,6 +119,7 @@ function editProfile() {
           creditCardCodeInput.disabled = true;
           rapiPagoInput.disabled = false;
           pagoFacilInput.disabled = false;
+          isPaymentValid = true;
         }
 
         if (input.value === "transferencia") {
@@ -123,6 +127,7 @@ function editProfile() {
           creditCardCodeInput.disabled = true;
           rapiPagoInput.disabled = true;
           pagoFacilInput.disabled = true;
+          isPaymentValid = true;
         }
       }
     });
@@ -173,6 +178,7 @@ function editProfile() {
 
   /*---------------------- VALIDAR LA CONTRASEÑA ---------------------- */
   function validarPassword(password) {
+    if (password === "") return true; // si esta vacio esta bien por que el usuario no esta obligado a cambiar la contraseña
     if (password.length != 8) return false; // Validar longitud de 8 caracteres
 
     let letras = 0; // Contador de letras
@@ -180,7 +186,7 @@ function editProfile() {
     let especiales = 0; // Contador de caracteres especiales
 
     // Contar letras, números y caracteres especiales
-    // Recorre cada valor del iterable (ej: cada input, carácter, etc.) FOR OF 
+    // Recorre cada valor del iterable (ej: cada input, carácter, etc.) FOR OF
     for (let char of password) {
       // Expresión Regular para letras si devuelve true significa que es una letra  entonces aumentamos el contador
       // Caso contrario si el regex de numeros devuelve false entonces aumentamos el contador de numeros pero si el regex de numeros es false entonces es caracter especial
@@ -230,7 +236,7 @@ function editProfile() {
 
   /*----------------------  ACTUALIZAR PERFIL ---------------------- */
   function sendChanges() {
-    user.password = passwordInput.value; // efectuamos el cambio de contraseña
+    if (passwordInput.value != "") user.password = passwordInput.value; // efectuamos el cambio de contraseña
 
     /* Si es tarjeta de crédito efectuamos los cambios correspondientes */
     if (inputsRadio[0].checked) {
@@ -258,8 +264,10 @@ function editProfile() {
     // Guardar los cambios en el localStorage
     localStorage.setItem(user.email, JSON.stringify(user));
     sessionStorage.setItem("user", JSON.stringify(user));
-    alert("Cambios guardados exitosamente");
-    window.location.href = "/pages/home.html"; // Redirigir a la página de inicio
+    saveButton.textContent = "Cambios aplicados";
+    setTimeout(() => {
+      window.location.href = "/pages/home.html"; // Redirigir a la página de inicio
+    }, 2500);
   }
 
   /*---------------------- CERRAR SESIÓN ---------------------- */
