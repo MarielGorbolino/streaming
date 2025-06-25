@@ -80,7 +80,6 @@ const seriesSimilares = [
         wiki: "https://es.wikipedia.org/wiki/Esther_Acebo",
       },
     ],
-    actores2: "Álvaro Morte, Úrsula Corberó, Pedro Alonso, Itziar Ituño",
     descripcion:
       "Un grupo de criminales ejecuta el mayor atraco de la historia bajo las órdenes del misterioso Profesor.",
     imagen: "../assets/img/la_casa_de_papel_s.jpg",
@@ -129,7 +128,6 @@ const seriesSimilares = [
         wiki: "https://es.wikipedia.org/wiki/Faye_Marsay",
       },
     ],
-    actores2: "Sofía Ramírez, Lucas Díaz, Camila Ortega",
     descripcion:
       "Un grupo de adolescentes atraviesa los desafíos del colegio, las relaciones y la búsqueda de identidad en una ciudad moderna.",
     imagen: "../assets/img/adolescencia_s.jpg",
@@ -163,7 +161,6 @@ const seriesSimilares = [
         wiki: "https://es.wikipedia.org/wiki/Carmen_Villalobos",
       },
     ],
-    actores2: "William Levy, Laura Londoño, Carmen Villalobos",
     descripcion:
       "La historia de amor entre Gaviota, una recolectora de café, y Sebastián, un joven de familia cafetera, llena de obstáculos y pasiones.",
     imagen: "../assets/img/cafe_con_aroma_de_mujer_s.jpg",
@@ -201,7 +198,6 @@ const seriesSimilares = [
         wiki: "https://es.wikipedia.org/wiki/Antonio_Gaona",
       },
     ],
-    actores2: "Bárbara de Regil, José María de Tavira, Antonio Gaona",
     descripcion:
       "Rosario, una joven de barrio humilde, se convierte en una mujer peligrosa en busca de justicia mientras lucha entre el amor y la venganza.",
     imagen: "../assets/img/rosario_tijeras_s.jpg",
@@ -245,7 +241,6 @@ const seriesSimilares = [
         wiki: "https://es.wikipedia.org/wiki/Andrea_Pietra",
       },
     ],
-    actores2: "Ricardo Darín, Dolores Fonzi, Peter Lanzani",
     descripcion:
       "Una nevada mortal azota Buenos Aires y un grupo de sobrevivientes debe enfrentarse a una invasión alienígena mientras luchan por mantenerse con vida.",
     imagen: "../assets/img/eternauta_s.jpg",

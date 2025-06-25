@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filtrado.forEach(item => {
       const a = document.createElement("a");
-      href = item.tipo === "serie" ? './serie.html' :'./films.html';
+      const href = item.tipo === "serie" ? './serie.html' :'./films.html';
       a.href = `${href}?titulo=${encodeURIComponent(item.titulo)}`;
       const img = document.createElement("img");
       img.src = item.imagen;
