@@ -252,7 +252,9 @@ function asignarEventosCarrusel() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  pelicula = peliculasSimilares[0];
+  const params = new URLSearchParams(window.location.search);
+  const titulo = params?.get("titulo");
+  pelicula = peliculasSimilares.find(a=> a.titulo == titulo) ?? peliculasSimilares[0];
   addDefault(pelicula);
   addVideo(pelicula.video);
   addImage(pelicula.titulo);

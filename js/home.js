@@ -111,14 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filtrado.forEach(item => {
       const a = document.createElement("a");
-
-     if (item.tipo === "serie") {
-        a.href = "./serie.html";
-        } 
-        else {
-        a.href = "./films.html";
-        }
-
+      href = item.tipo === "serie" ? './serie.html' :'./films.html';
+      a.href = `${href}?titulo=${encodeURIComponent(item.titulo)}`;
       const img = document.createElement("img");
       img.src = item.imagen;
       img.alt = item.titulo;
@@ -135,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   filtroCategoria.addEventListener("change", () => {
     cargarContenido(filtroCategoria.value);
   });
-
+  
 
   cargarContenido("todo");
 });
