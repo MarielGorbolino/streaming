@@ -101,9 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const filtrado = catalogo.filter(item => {
-        const coincideTipo = tipoSeleccionado === "todo" || item.tipo === tipoSeleccionado;
-        const coincideCategoria = categoriaSeleccionada === "" || item.categoria === categoriaSeleccionada;
-
+        const coincideTipo = tipoSeleccionado === "todo" || item.tipo === tipoSeleccionado; 
+        const coincideCategoria = categoriaSeleccionada === "" || item.categoria.includes(categoriaSeleccionada);
       return coincideTipo && coincideCategoria;
     });
 
