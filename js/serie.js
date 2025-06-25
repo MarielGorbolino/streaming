@@ -1,7 +1,7 @@
 const seriesSimilares = [
   {
     titulo: "El Marginal",
-    genero: "Crimen / Drama",
+    genero: "Accion / Drama",
     actores: [
       {
         nombre: "Juan Minujín",
@@ -145,7 +145,7 @@ const seriesSimilares = [
     ],
   },
   {
-    titulo: "Café con Aroma de Mujer",
+    titulo: "Cafe Con Aroma De Mujer",
     genero: "Drama / Romance",
     actores: [
       {
@@ -381,11 +381,10 @@ function asignarEventosCarruselSeries() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const params = new URLSearchParams(window.location.search);
   const titulo = params?.get("titulo");
-  console.log(titulo)
-  serie = seriesSimilares.find(a=> a.titulo == titulo) ?? seriesSimilares[0];
+  console.log(titulo);
+  serie = seriesSimilares.find((a) => a.titulo == titulo) ?? seriesSimilares[0];
 
   addDefault(serie);
   addTemp(serie);

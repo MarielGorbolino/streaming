@@ -4,88 +4,85 @@ const catalogo = [
     tipo: "serie",
     imagen: "../assets/img/adolescencia_s.jpg",
     enlace: "./serie.html",
-    categoria: "drama"
+    categoria: ["drama"],
   },
   {
     titulo: "Bala Perdida 3",
     tipo: "pelicula",
     imagen: "../assets/img/bala_perdida_3.jpg",
     enlace: "./films.html",
-    categoria: "accion"
- },
-    {
+    categoria: ["accion", "drama"],
+  },
+  {
     titulo: "Cafe Con Aroma De Mujer",
     tipo: "serie",
     imagen: "../assets/img/cafe_con_aroma_de_mujer_s.jpg",
     enlace: "./serie.html",
-    categoria: "romance"
-    },
-   {
+    categoria: ["romance", "drama"],
+  },
+  {
     titulo: "Contraataque",
     tipo: "pelicula",
     imagen: "../assets/img/contraataque.jpg",
     enlace: "./films.html",
-    categoria: "accion"
+    categoria: ["accion", "thriller"],
   },
-    {
+  {
     titulo: "De Vuelta A La Accion",
     tipo: "pelicula",
     imagen: "../assets/img/de_vuelta_a_la_accion.jpg",
     enlace: "./films.html",
-    categoria: "accion"
+    categoria: ["accion", "comedia"],
   },
-
   {
     titulo: "El Marginal",
     tipo: "serie",
     imagen: "../assets/img/el_marginal_s.jpg",
     enlace: "./serie.html",
-    categoria: "drama"
+    categoria: ["drama", "accion"],
   },
-    {
+  {
     titulo: "Estragos",
     tipo: "pelicula",
     imagen: "../assets/img/estragos.jpg",
     enlace: "./films.html",
-    categoria: "accion"
+    categoria: ["accion", "drama", "romance"],
   },
   {
     titulo: "GT Max",
     tipo: "pelicula",
     imagen: "../assets/img/gt_max_p.jpg",
     enlace: "./films.html",
-    categoria: "accion"
+    categoria: ["accion"],
   },
- {
+  {
     titulo: "La Casa De Papel",
     tipo: "serie",
     imagen: "../assets/img/la_casa_de_papel_s.jpg",
     enlace: "./serie.html",
-    categoria: "accion"
+    categoria: ["accion", "thriller"],
   },
   {
     titulo: "Rosario Tijeras",
     tipo: "serie",
     imagen: "../assets/img/rosario_tijeras_s.jpg",
     enlace: "./serie.html",
-    categoria: "drama"
+    categoria: ["drama", "romance", "accion"],
   },
-   {
+  {
     titulo: "El Sindicato",
     tipo: "pelicula",
     imagen: "../assets/img/sindicato_p.jpg",
     enlace: "./films.html",
-    categoria: "accion"
+    categoria: ["accion"],
   },
-
   {
     titulo: "El Eternauta",
     tipo: "serie",
     imagen: "../assets/img/eternauta_s.jpg",
     enlace: "./serie.html",
-    categoria: "ciencia"
+    categoria: ["ciencia_ficcion", "thriller"],
   },
-
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -93,24 +90,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const filtroTipo = document.getElementById("tipo");
   const filtroCategoria = document.getElementById("category");
 
-
   function cargarContenido() {
     contenedor.innerHTML = "";
     const tipoSeleccionado = filtroTipo.value;
     const categoriaSeleccionada = filtroCategoria.value;
 
-
-    const filtrado = catalogo.filter(item => {
-        const coincideTipo = tipoSeleccionado === "todo" || item.tipo === tipoSeleccionado; 
-        const coincideCategoria = categoriaSeleccionada === "" || item.categoria.includes(categoriaSeleccionada);
+    const filtrado = catalogo.filter((item) => {
+      const coincideTipo =
+        tipoSeleccionado === "todo" || item.tipo === tipoSeleccionado;
+      const coincideCategoria =
+        categoriaSeleccionada === "" ||
+        item.categoria.includes(categoriaSeleccionada);
       return coincideTipo && coincideCategoria;
     });
 
-
-
-    filtrado.forEach(item => {
+    filtrado.forEach((item) => {
       const a = document.createElement("a");
-      const href = item.tipo === "serie" ? './serie.html' :'./films.html';
+      const href = item.tipo === "serie" ? "./serie.html" : "./films.html";
       a.href = `${href}?titulo=${encodeURIComponent(item.titulo)}`;
       const img = document.createElement("img");
       img.src = item.imagen;
@@ -128,9 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
   filtroCategoria.addEventListener("change", () => {
     cargarContenido(filtroCategoria.value);
   });
-  
 
   cargarContenido("todo");
 });
-  
-  
