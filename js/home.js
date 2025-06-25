@@ -78,6 +78,14 @@ const catalogo = [
     categoria: "accion"
   },
 
+  {
+    titulo: "El Eternauta",
+    tipo: "serie",
+    imagen: "../assets/img/eternauta_s.jpg",
+    enlace: "./serie.html",
+    categoria: "ciencia"
+  },
+
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
