@@ -240,18 +240,27 @@ function carruselMove() {
     carrusel.scrollBy({ left: scroll, behavior: "smooth" }); //  behavior: "smooth" la navegacion sea suave, con efecto
   });
 }
+function clickHandler(event) {
+  const img = event.currentTarget;
+  const pelicula = peliculasSimilares.find(p => p.titulo === img.alt);
+  addDefault(pelicula);
+  addActors(pelicula.actores);
+  addVideo(pelicula.video);
+  addImage(pelicula.titulo);
+
+  asignarEventosCarrusel();
+}
 
 function asignarEventosCarrusel() {
   const imagenes = document.querySelectorAll(".imagenes");
-  imagenes.forEach((img) => {
-    img.addEventListener("click", () => {
-      pelicula = peliculasSimilares.find((imagen) => imagen.titulo == img.alt);
-      addDefault(pelicula);
-      addActors(pelicula.actores);
-      addVideo(pelicula.video);
-      addImage(pelicula.titulo);
-      asignarEventosCarrusel();
-    });
+
+  // Primero eliminamos el listener (por si estaba asignado)
+  imagenes.forEach(img => {
+    img.removeEventListener("click", clickHandler);
+  });
+
+  imagenes.forEach(img => {
+    img.addEventListener("click", clickHandler);
   });
 }
 

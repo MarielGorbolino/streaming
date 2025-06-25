@@ -365,25 +365,34 @@ function selectorTemporadas() {
   });
 }
 
-function asignarEventosCarruselSeries() {
+function clickHandler(event) {
+  const img = event.currentTarget;
+  serie = seriesSimilares.find((imagen) => imagen.titulo == img.alt);
+  addDefault(serie);
+  addTemp(serie);
+  addActors(serie);
+  addVideo(serie.video);
+  addImage(serie);
+
+  asignarEventosCarrusel();
+}
+
+function asignarEventosCarrusel() {
   const imagenes = document.querySelectorAll(".imagenes");
-  imagenes.forEach((img) => {
-    img.addEventListener("click", () => {
-      serie = seriesSimilares.find((imagen) => imagen.titulo == img.alt);
-      addDefault(serie);
-      addTemp(serie);
-      addActors(serie);
-      addVideo(serie.video);
-      addImage(serie); // Regeneramos imágenes
-      asignarEventosCarruselSeries(); // Vuelve a asignar eventos a las nuevas imágenes
-    });
+
+  // Primero eliminamos el listener (por si estaba asignado)
+  imagenes.forEach(img => {
+    img.removeEventListener("click", clickHandler);
+  });
+
+  imagenes.forEach(img => {
+    img.addEventListener("click", clickHandler);
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const titulo = params?.get("titulo");
-  console.log(titulo);
   serie = seriesSimilares.find((a) => a.titulo == titulo) ?? seriesSimilares[0];
 
   addDefault(serie);
@@ -393,6 +402,6 @@ document.addEventListener("DOMContentLoaded", () => {
   addActors(serie);
 
   carruselMove();
-  asignarEventosCarruselSeries();
+  asignarEventosCarrusel();
   selectorTemporadas();
 });

@@ -89,24 +89,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector(".grid__container");
   const filtroTipo = document.getElementById("tipo");
   const filtroCategoria = document.getElementById("category");
+  const buscador = document.getElementById("buscador");
 
-  function cargarContenido() {
-    contenedor.innerHTML = "";
+  function filtrarCatalogo() {
     const tipoSeleccionado = filtroTipo.value;
     const categoriaSeleccionada = filtroCategoria.value;
+    const textoBusqueda = buscador.value.toLowerCase().trim();
 
-    const filtrado = catalogo.filter((item) => {
-      const coincideTipo =
-        tipoSeleccionado === "todo" || item.tipo === tipoSeleccionado;
-      const coincideCategoria =
-        categoriaSeleccionada === "" ||
-        item.categoria.includes(categoriaSeleccionada);
-      return coincideTipo && coincideCategoria;
+    return catalogo.filter(item => {
+      const coincideTipo = tipoSeleccionado === "todo" || item.tipo === tipoSeleccionado;
+      const coincideCategoria = categoriaSeleccionada === "" || item.categoria.includes(categoriaSeleccionada);
+      const coincideBusqueda = item.titulo.toLowerCase().includes(textoBusqueda);
+      return coincideTipo && coincideCategoria && coincideBusqueda;
     });
+  }
 
-    filtrado.forEach((item) => {
+  function renderizarCatalogo(items) {
+    contenedor.innerHTML = "";
+    items.forEach(item => {
       const a = document.createElement("a");
-      const href = item.tipo === "serie" ? "./serie.html" : "./films.html";
+      const href = item.tipo === "serie" ? './serie.html' : './films.html';
       a.href = `${href}?titulo=${encodeURIComponent(item.titulo)}`;
       const img = document.createElement("img");
       img.src = item.imagen;
@@ -117,13 +119,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  filtroTipo.addEventListener("change", () => {
-    cargarContenido(filtroTipo.value);
-  });
+  function actualizarVista() {
+    const resultado = filtrarCatalogo();
+    renderizarCatalogo(resultado);
+  }
 
-  filtroCategoria.addEventListener("change", () => {
-    cargarContenido(filtroCategoria.value);
-  });
+  filtroTipo.addEventListener("change", actualizarVista);
+  filtroCategoria.addEventListener("change", actualizarVista);
+  buscador.addEventListener("input", actualizarVista);
 
-  cargarContenido("todo");
+  actualizarVista();
 });
